@@ -1,0 +1,46 @@
+/*
+---------------------------------------------------------------
+*
+* form
+*
+---------------------------------------------------------------
+*/
+
+input,
+textarea {
+    color: #333;
+}
+
+
+.form-wrap {
+    vertical-align: middle;
+    text-align: left;
+    @include clearfix();
+}
+
+
+
+// select
+.select-wrap {
+    width: 180px;
+    height: 35px;
+    overflow: hidden;
+    background: url(../images/icon/down.gif) no-repeat 95% center #fff;
+    border: 1px solid $border-color;
+
+    select {
+        background: transparent;
+        width: 180px;
+        padding: 5px;
+        font-size: 14px;
+        line-height: 1;
+        border: 0;
+        border-radius: 0;
+        height: 35px;
+        -webkit-appearance: none;
+    }
+}
+
+
+
+

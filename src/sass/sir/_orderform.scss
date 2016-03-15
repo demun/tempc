@@ -1,0 +1,169 @@
+/*
+---------------------------------------------------------------
+*
+* orderform 주문서작성
+*
+---------------------------------------------------------------
+*/
+
+#forderform {}
+
+
+#sod_list {
+	margin-top: 40px;
+
+	.sod_opt {
+		margin-top: 5px;
+		ul {
+			@include ulstyle();
+			li {
+				font-size: 13px;
+				color: #666;
+			}
+		}
+	}
+	.sod_img {
+		text-align: center;
+	}
+	b {
+		font-weight: 400;
+	}
+}
+
+#sod_bsk_tot {
+	@include clearfix();
+	background: none;
+	border: 0 none;
+	margin: -27px 0 0;
+	padding: 20px 0 40px;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $link-color;
+	dt {
+		width: ($sub-width - 200); //920
+		float: left;
+		padding-left: ($sub-width - 400); //720px
+		text-align: left;
+		margin: 0 0 5px;
+	}
+	dd {
+		width: ($sub-width - 920);
+		float: left;
+		text-align: left;
+		margin: 0 0 5px;
+	}
+	.sod_bsk_cnt {
+		margin-top: 5px;
+		margin-bottom: 10px;
+		background: #666;
+		height: 30px;
+		&.odd {
+			color: #fff;
+			padding-top: 4px;
+		}
+		&.even {
+			color: #fff;
+			font-size: 18px;
+		}
+	}
+	.odd {
+		color: #666;
+		font-weight: 400;
+	}
+	.even {
+		color: $text-color;
+	}
+}
+
+
+
+// 주문하시는 분 입력
+#sod_frm_orderer,
+#sod_frm_taker,
+#sod_frm_pay {
+	margin-top: 40px;
+
+	h2 {
+		@extend %title3;
+		margin-bottom: 4px;
+		i {
+			margin-right: 5px;
+		}
+	}
+	.tbl_frm01 {
+		th {
+			position: relative;
+			padding-left: 20px;
+
+		}
+		textarea {
+			height: 200px;
+		}
+	}
+}
+
+
+
+// 받으시는 분 입력
+#sod_frm_paysel {
+
+	// margin-top: -40px;
+	background-color: #f7f7f7;
+	padding: 20px 0;
+	text-align: center;
+	border: 0 none;
+
+	// input,
+	label,
+	p,
+	div {
+		font-family: $font-family-base;
+		font-size: $font-size-base;
+		color: $text-color;
+	}
+
+
+	legend {
+		display: none;
+	}
+
+	.kakaopay_icon {
+		background: url(../images/icon/kakao.gif) no-repeat;
+		width: 72px;
+		height: 22px;
+		text-indent: -99999px;
+		display: inline-block;
+	}
+
+	.PAYCO {
+		color: #ff001b;
+	}
+
+	#od_temp_point {
+		margin: 0 10px;
+	}
+	#sod_frm_pt {
+		margin: 15px auto;
+	}
+}
+
+.add-bdt {
+	margin-bottom: 30px;
+	margin-top: -40px;
+	width: 100%;
+	height: 1px;
+	background-color: $border-color;
+}
+
+
+#display_pay_button {
+	margin: 30px auto 60px;
+
+	.btn_submit {
+		@extend %btnSubmit;
+		width: 170px;
+	}
+	.btn01 {
+		@extend %btnStyle;
+	}
+}
+

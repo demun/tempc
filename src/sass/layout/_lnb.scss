@@ -1,0 +1,34 @@
+
+
+
+.lnb-list {
+	@include ulstyle();
+	margin-top: 160px;
+	margin-bottom: 50px;
+
+	li {
+		a {
+			display: block;
+			background-color: #b5b5b5;
+			color: #fff;
+			font-size: 17px;
+			padding: 15px 15px 15px 30px;
+			text-decoration: none;
+			word-break: break-all;
+
+			&.on {
+				background-color: #ff7315;
+			}
+		}
+	}
+
+	.small {
+		margin-left: 0;
+		display: block;
+	}
+}
+
+
+
+
+

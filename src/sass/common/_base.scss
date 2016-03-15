@@ -1,0 +1,97 @@
+/*
+---------------------------------------------------------------
+*
+* base
+*
+---------------------------------------------------------------
+*/
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+
+// Body reset
+
+html {
+    // font-size: 10px;
+    font-size: 100%;
+    // margin: 0;
+    // padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    // margin: 0;
+    // padding: 0;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $body-bg;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-family-base;
+    // margin: 0;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+// Links
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+
+    &:focus {
+        // Default
+        outline: thin dotted;
+        // WebKit
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+}
+
+
+img {
+	// max-width: 100%; // 쇼핑몰 때문에 제거
+	height: auto;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    // @include clearfix();
+}
+
+.wrapper {
+    margin: 0 auto;
+    position: relative;
+    @include clearfix();
+    width: $wrapper-width;
+}

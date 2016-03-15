@@ -1,0 +1,102 @@
+<div class="wrapper">
+    <div id="container">
+        <section id="bo_w">
+            <h2 id="container_title">자유게시판 글쓰기</h2>
+            <form name="fwrite" id="fwrite" action="http://61.37.147.220/basic/bbs/write_update.php" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                <input type="hidden" name="uid" value="2016030717191781">
+                <input type="hidden" name="w" value="">
+                <input type="hidden" name="bo_table" value="free2">
+                <input type="hidden" name="wr_id" value="0">
+                <input type="hidden" name="sca" value="">
+                <input type="hidden" name="sfl" value="">
+                <input type="hidden" name="stx" value="">
+                <input type="hidden" name="spt" value="">
+                <input type="hidden" name="sst" value="">
+                <input type="hidden" name="sod" value="">
+                <input type="hidden" name="page" value="">
+                <input type="hidden" value="html1" name="html">
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th scope="row">옵션</th>
+                                <td>
+                                    <input type="checkbox" id="notice" name="notice" value="1">
+                                    <label for="notice">공지</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wr_subject">제목<strong class="sound_only">필수</strong></label>
+                                </th>
+                                <td>
+                                    <div id="autosave_wrapper">
+                                        <input type="text" name="wr_subject" value="" id="wr_subject" required="" class="frm_input required" size="50" maxlength="255">
+                                        <button type="button" id="btn_autosave" class="btn_frmline">임시 저장된 글 (<span id="autosave_count">2</span>)</button>
+                                        <div id="autosave_pop">
+                                            <strong>임시 저장된 글 목록</strong>
+                                            <div>
+                                                <button type="button" class="autosave_close"><img src="http://61.37.147.220/basic/skin/board/basic2/img/btn_close.gif" alt="닫기"></button>
+                                            </div>
+                                            <ul></ul>
+                                            <div>
+                                                <button type="button" class="autosave_close"><img src="http://61.37.147.220/basic/skin/board/basic2/img/btn_close.gif" alt="닫기"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wr_content">내용<strong class="sound_only">필수</strong></label>
+                                </th>
+                                <td class="wr_content">
+                                    <span class="sound_only">웹에디터 시작</span>
+                                    <div class="cke_sc">
+                                        <button type="button" class="btn_cke_sc">단축키 일람</button>
+                                    </div>
+                                    <textarea id="wr_content" name="wr_content" class="smarteditor2" maxlength="65536" style="width: 100%; display: none;"></textarea>
+                                    <iframe frameborder="0" scrolling="no" src="http://61.37.147.220/basic/plugin/editor/smarteditor2/SmartEditor2Skin.html" style="width: 100%; height: 320px;"></iframe>
+                                    <span class="sound_only">웹 에디터 끝</span> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wr_link1">링크 #1</label>
+                                </th>
+                                <td>
+                                    <input type="text" name="wr_link1" value="" id="wr_link1" class="frm_input" size="50">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wr_link2">링크 #2</label>
+                                </th>
+                                <td>
+                                    <input type="text" name="wr_link2" value="" id="wr_link2" class="frm_input" size="50">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일 #1</th>
+                                <td>
+                                    <input type="file" name="bf_file[]" title="파일첨부 1 : 용량 1,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일 #2</th>
+                                <td>
+                                    <input type="file" name="bf_file[]" title="파일첨부 2 : 용량 1,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn_confirm">
+                    <input type="submit" value="작성완료" id="btn_submit" accesskey="s" class="btn_submit">
+                    <a href="./board.php?bo_table=free2" class="btn_cancel">취소</a>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //.main-wrap .wrapper -->

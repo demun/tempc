@@ -1,0 +1,75 @@
+/*
+---------------------------------------------------------------
+*
+* wishlist 위시리스트
+*
+*
+---------------------------------------------------------------
+*/
+
+
+// .main-wrap {
+
+
+#sod_ws {
+	margin-top: 40px;
+	margin-bottom: 70px;
+}
+
+.tbl_head01 {
+	margin-bottom: 30px;
+	thead {
+		th {
+			@extend %thStyle;
+		}
+	}
+	tbody {
+		td {
+			@extend .nowrap;
+		}
+	}
+
+	.sound_only {
+		display: none;
+	}
+
+	.td_chk {
+		width: 50px;
+		text-align: center;
+	}
+	.td_mngsmall {
+		width: 50px;
+		text-align: center;
+	}
+	.sod_ws_img {
+		width: 160px;
+		text-align: center;
+	}
+	.td_datetime {
+		width: 200px;
+		text-align: center;
+	}
+	.td_mngsmall {
+		width: 100px;
+	}
+	.td_datetime,
+	.td_mngsmall,
+	.td_mngsmall a {
+		color: #666;
+		font-size: 13px;
+	}
+}
+
+#sod_ws_act {
+	text-align: center;
+	.btn01 {
+		@extend %btnStyle;
+	}
+	.btn02 {
+		@extend %btnSubmit;
+	}
+}
+
+
+// }
+

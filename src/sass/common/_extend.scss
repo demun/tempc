@@ -1,0 +1,165 @@
+/*
+---------------------------------------------------------------
+*
+* extend
+*
+---------------------------------------------------------------
+*/
+
+// font awesome 을 다른곳에서 배경으로 사용할때 사용.
+// .class {
+// 	@extend %fontawesome;
+// 	&:after {
+// 		content: '\f105';
+// 	}
+// }
+
+%fontawesome {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+%title {
+	display: block;
+	font-family: $font-family-base;
+	color: $text-color;
+	font-weight: normal;
+	padding-bottom: 10px;
+	border-bottom: 2px solid $active-bg;
+	font-size: 25px;
+}
+%titleSub {
+	font-family: $font-family-base;
+	font-size: 15px;
+	color: #666;
+}
+%title2 {
+	display: block;
+	font-family: $font-family-base;
+	color: $text-color;
+	font-weight: normal;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $border-color;
+	font-size: 25px;
+}
+%title3 {
+	font-family: $font-family-base;
+	// display: block;
+	color: $text-color;
+	font-weight: normal;
+	padding-bottom: 15px;
+	font-size: 16px;
+	text-align: left;
+	white-space: nowrap;
+	border-bottom: 1px solid #b5b5b5;
+}
+
+// button
+%submit {
+	font-family: $font-family-base;
+	width: 240px;
+	height: auto;
+	line-height: $line-height-base;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	border: 1px solid $border-color;
+}
+
+%cancel {
+	font-family: $font-family-base;
+	height: auto;
+	line-height: $line-height-base;
+	background-color: #fff;
+	border: 1px solid $border-color;
+	color: $link-color;
+	width: 100px;
+	padding: 10px;
+}
+
+%btn {
+	padding: 10px 20px;
+	width: auto;
+	height: auto;
+	line-height: $line-height-base;
+	text-align: center;
+	border: 1px solid $border-color;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+%btnStyle {
+	@extend %btn;
+	background: #fff;
+	color: $text-color;
+	&:hover {
+		color: #fff;
+		background: $active-bg;
+	}
+}
+%btnSubmit {
+	@extend %btn;
+	background: $active-bg;
+	color: #fff;
+	&:hover {
+		color: #fff;
+		background: darken($active-bg, 10%);
+	}
+}
+%btnBlack {
+	@extend %btn;
+	background: #333;
+	color: #fff;
+	&:hover {
+		color: #fff;
+		background: lighten(#333, 10%);
+	}
+}
+
+
+// 영카트 테이블
+%thStyle {
+	background: $th-bg;
+	font-size: 13px;
+	font-weight: normal;
+	padding: 12px 0;
+	letter-spacing: 0;
+	@extend .nowrap;
+	border-top: 1px solid #afafaf;
+	border-bottom: 1px solid $border-color;
+	input {
+		vertical-align: middle;
+	}
+}
+
+
+
+
+%subTitle {
+	font-size: 16px;
+	i {
+		color: $active-bg;
+		margin-right: 5px;
+	}
+}
+
+
+
+%h2 {
+	font-size: 20px;
+	text-align: center;
+	position: relative;
+	i {
+		color: $active-bg;
+		margin-right: 5px;
+	}
+}
+
+
+
+

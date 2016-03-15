@@ -1,0 +1,407 @@
+/*
+---------------------------------------------------------------
+*
+* helper
+*
+---------------------------------------------------------------
+*/
+
+
+
+
+/* color
+* ------------------------------------------------------------ */
+
+.black {
+    color: #424242;
+}
+
+.gray {
+    color: #989898;
+}
+
+
+
+
+
+
+/* margin
+* ------------------------------------------------------------ */
+
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+.mt-60 {
+    margin-top: 60px;
+}
+.mt-70 {
+    margin-top: 70px;
+}
+.mt-80 {
+    margin-top: 80px;
+}
+.mt-90 {
+    margin-top: 90px;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+
+
+.mr-5 {
+    margin-right: 5px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.mr-30 {
+    margin-right: 30px;
+}
+.mr-40 {
+    margin-right: 40px;
+}
+.mr-50 {
+    margin-right: 50px;
+}
+.mr-60 {
+    margin-right: 60px;
+}
+.mr-70 {
+    margin-right: 70px;
+}
+.mr-80 {
+    margin-right: 80px;
+}
+.mr-90 {
+    margin-right: 90px;
+}
+.mr-100 {
+    margin-right: 100px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+.mb-100 {
+    margin-bottom: 100px;
+}
+.mb-200 {
+    margin-bottom: 200px;
+}
+
+
+.ml-5 {
+    margin-left: 5px;
+}
+.ml-10 {
+	margin-left: 10px;
+}
+
+
+.mt-1p {
+    margin-top: 1%;
+}
+.mt-2p {
+    margin-top: 2%;
+}
+.mt-3p {
+    margin-top: 3%;
+}
+.mt-4p {
+    margin-top: 4%;
+}
+.mt-5p {
+    margin-top: 5%;
+}
+.mt-6p {
+    margin-top: 6%;
+}
+.mt-7p {
+    margin-top: 7%;
+}
+.mt-8p {
+    margin-top: 8%;
+}
+.mt-9p {
+    margin-top: 9%;
+}
+.mt-10p {
+    margin-top: 10%;
+}
+
+.mb-1p {
+    margin-bottom: 1%;
+}
+.mb-2p {
+    margin-bottom: 2%;
+}
+.mb-3p {
+    margin-bottom: 3%;
+}
+.mb-4p {
+    margin-bottom: 4%;
+}
+.mb-5p {
+    margin-bottom: 5%;
+}
+.mb-6p {
+    margin-bottom: 6%;
+}
+.mb-7p {
+    margin-bottom: 7%;
+}
+.mb-8p {
+    margin-bottom: 8%;
+}
+.mb-9p {
+    margin-bottom: 9%;
+}
+.mb-10p {
+    margin-bottom: 10%;
+}
+
+
+
+/* padding
+* ------------------------------------------------------------ */
+
+.pt-10 {
+    padding-top: 10px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+.pt-30 {
+    padding-top: 30px;
+}
+.pt-40 {
+    padding-top: 40px;
+}
+.pt-50 {
+    padding-top: 50px;
+}
+.pt-60 {
+    padding-top: 60px;
+}
+.pt-70 {
+    padding-top: 70px;
+}
+.pt-80 {
+    padding-top: 80px;
+}
+.pt-90 {
+    padding-top: 90px;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+.pl-20 {
+    padding-left: 20px;
+}
+.pl-30 {
+    padding-left: 30px;
+}
+.pl-40 {
+    padding-left: 40px;
+}
+.pl-50 {
+    padding-left: 50px;
+}
+.pl-60 {
+    padding-left: 60px;
+}
+.pl-70 {
+    padding-left: 70px;
+}
+.pl-80 {
+    padding-left: 80px;
+}
+.pl-90 {
+    padding-left: 90px;
+}
+.pl-100 {
+    padding-left: 100px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+.pr-20 {
+    padding-right: 20px;
+}
+.pr-30 {
+    padding-right: 30px;
+}
+.pr-40 {
+    padding-right: 40px;
+}
+.pr-50 {
+    padding-right: 50px;
+}
+.pr-60 {
+    padding-right: 60px;
+}
+.pr-70 {
+    padding-right: 70px;
+}
+.pr-80 {
+    padding-right: 80px;
+}
+.pr-90 {
+    padding-right: 90px;
+}
+.pr-100 {
+    padding-right: 100px;
+}
+
+/* width
+* ------------------------------------------------------------ */
+
+.w-10p {
+    width: 10%;
+}
+.w-15p {
+    width: 15%;
+}
+.w-20p {
+    width: 20%;
+}
+.w-30p {
+    width: 30%;
+}
+.w-40p {
+    width: 40%;
+}
+.w-50p {
+    width: 50%;
+}
+.w-60p {
+    width: 60%;
+}
+.w-70p {
+    width: 70%;
+}
+.w-80p {
+    width: 80%;
+}
+.w-90p {
+    width: 90%;
+}
+.w-100p {
+    width: 100%;
+}
+
+.w-70 {
+    width: 70px;
+}
+
+
+
+/* text
+* ------------------------------------------------------------ */
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.strong {
+    font-weight: bold;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+
+
+/* others
+* ------------------------------------------------------------ */
+
+.bd-block {
+	border: 1px solid $border-color;
+}
+
+.d-n {
+    display: none;
+}
+.block {
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.block-left {
+    float: left;
+}
+.block-right {
+    float: right;
+}
+
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+

@@ -1,0 +1,172 @@
+/*
+---------------------------------------------------------------
+*
+* orderinquiry 주문내역조회
+*
+* 영카트에 사용되는 테이블 기본스타일 정의
+* 페이징 스타일
+* input, textarea 스타일
+*
+---------------------------------------------------------------
+*/
+
+// .main-wrap {
+input,
+textarea {
+	font-family: $font-family-base;
+	border: 1px solid $border-color;
+    background: #fff;
+    color: #333;
+    vertical-align: middle;
+    // line-height: 2em;
+    padding: 5px;
+    height: auto;
+}
+input[type="file"] {
+	cursor: pointer;
+	border: 0 none;
+}
+
+input[type="checkbox"]+ label,
+input[type="radio"] + label {
+	margin-right: 15px;
+}
+.frm_input + input[type="checkbox"],
+.frm_input + label {
+	margin-left: 10px;
+}
+
+textarea {
+	width: 100%;
+}
+.dotted {
+	&.active {
+		color: $active-bg;
+	}
+}
+
+th {
+	.dotted {
+		margin-right: 5px;
+		+ label {
+			margin-left: -5px;
+		}
+	}
+}
+
+.sound_only {
+	display: none;
+}
+
+
+// 테이블 스타일
+.tbl_wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#container {
+	.sound_only {
+		display: none;
+	}
+
+	.tbl_head01,
+	.tbl_head02 {
+		thead {
+			th {
+				@extend %thStyle;
+				color: #123456;
+			}
+		}
+		tbody {
+			td {
+				@extend .nowrap;
+				padding: 12px 10px;
+				border-bottom: 1px solid $border-color;
+			}
+		}
+		th,
+		td {
+			font-family: $font-family-base;
+			color: $text-color;
+		}
+	}
+
+	.tbl_frm01 {
+		tr:first-child {
+			th,td {
+				// border-top: 1px solid $border-color;
+			}
+		}
+		td,
+		th {
+			@extend .nowrap;
+			padding: 12px 10px;
+			border-bottom: 1px solid $border-color;
+		}
+		th {
+			font-weight: 400;
+		}
+		td {
+
+		}
+	}
+
+}
+// 페이징 스타일
+.pg_wrap {
+	text-align: center;
+	margin-top: 50px;
+	a {
+		text-decoration: none;
+	}
+	.pg_page {
+		background: #e7e7e7;
+		color: $text-color;
+		height: auto;
+		padding: 5px 10px;
+		line-height: 1;
+		font-size: 13px;
+		text-decoration: none;
+		&:hover {
+			background: darken(#e7e7e7, 10%);
+		}
+	}
+	.pg_current {
+		background: $active-bg;
+		color: #fff;
+		height: auto;
+		padding: 5px 10px;
+		line-height: 1;
+		font-size: 13px;
+		&:hover {
+			background: lighten($active-bg, 10%);
+		}
+	}
+}
+
+#sod_v {
+	margin-top: 40px;
+	margin-bottom: 70px;
+
+	.tbl_head01 {
+		td {
+			color: #666;
+			text-align: center;
+			a {
+				color: #666;
+			}
+		}
+	}
+}
+
+#sod_v_info {
+	display: none;
+}
+
+
+// }
+
+
+

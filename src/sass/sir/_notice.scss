@@ -1,0 +1,90 @@
+/*
+---------------------------------------------------------------
+*
+* notice 공지사항
+*
+---------------------------------------------------------------
+*/
+
+.notice {
+
+	.tbl_head01 {
+		margin-bottom: 50px;
+	}
+
+	// 공지사항2
+	#bo_cate_ul {
+		margin-top: 20px;
+		padding-bottom: 40px;
+
+		li {
+			display: block;
+			float: left;
+			width: auto;
+
+			a {
+				background-color: #f7f7f7;
+				border: 1px solid $border-color;
+				color: #999;
+				width: 150px;
+
+				&:hover {
+					border-color: #333;
+				}
+			}
+			#bo_cate_on {
+				color: #333;
+				border-color: #333;
+				background-color: #fff;
+
+				&:hover {
+					border-color: $active-bg;
+				}
+			}
+		}
+	}
+
+
+}
+
+
+
+// 공지사항 아이콘 설정
+#container {
+	.notice {
+		.tbl_head01 {
+			.td_num {
+				.fa-bell {
+					color: $active-bg;
+				}
+			}
+			.bo_notice {
+				.td_subject,
+				.td_subject a {
+					color: #333;
+					font-weight: 500;
+				}
+				
+			}
+			tbody {
+				td,
+				a {
+					color: #666;
+					font-weight: 400;
+
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+// 1대1 게시판
+
+
+
+
+

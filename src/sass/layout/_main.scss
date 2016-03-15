@@ -1,0 +1,77 @@
+/*
+---------------------------------------------------------------
+*
+* main
+*
+---------------------------------------------------------------
+*/
+
+
+.main {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px;
+    
+    .banner {
+        margin-top: 40px;
+    }
+
+    .block-01 {
+    	margin-top: 50px;
+    }
+    .block-02 {
+    	margin-top: 50px;
+    }
+    .block-03 {
+    	margin-top: 50px;
+    }
+}
+
+
+
+.font-wrap {}
+
+
+.item-wrap {
+    @include clearfix();
+    min-height: 292px;
+    padding: 15px 40px 15px 0;
+    background: #d1d1d1 url('http://placehold.it/276x292?text=bg') no-repeat left center;
+}
+.item-bg-1 {}
+
+.box-wrap {
+    width: 886px;
+    float: right;
+    margin-top: 10px;
+    background-color: #fff;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .list-3 {
+        li {
+            padding: 15px 25px;
+            margin: 15px 0;
+            position: relative;
+
+            &:first-child:before {
+                display: none;
+            }
+            &:before {
+                content: '';
+                height: 220px;
+                width: 1px;
+                background-color: $border-color;
+                position: absolute;
+                left: 0;
+                top: 10px;
+            }
+        }
+    }
+}
+
+
+
+

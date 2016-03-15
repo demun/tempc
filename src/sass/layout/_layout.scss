@@ -1,0 +1,128 @@
+/*
+---------------------------------------------------------------
+*
+* layout
+*
+---------------------------------------------------------------
+*/
+
+
+
+
+
+.page-wrap {
+	// margin-right: $quick-width;
+	height: 100%;
+	z-index: 1;
+	position: relative;
+}
+
+.quick-wrap {
+	width: $quick-width;
+	right: -$quick-width;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	background-color: #fff;
+	border-left: 1px solid $border-color;
+	height: 100%;
+}
+
+/* B type
+* ------------------------------------------------------------ */
+
+.btype {
+	.page-wrap {
+		width: 100%;
+	}
+
+	.wrapper {
+		width: $wrapper-width-b;
+	}
+}
+
+
+.btype-block-01 {
+	.border-box {
+		max-height: 360px;
+	}
+	.block-left {
+		width: 650px;
+	}
+	.block-right {
+		width: 440px;
+	}
+
+	.block-left-2 {
+		float: left;
+		width: 280px;
+		border-right: 1px solid $border-color;
+		.num-text {
+			margin-top: 0;
+			.num {
+				color: $active-bg;
+			}
+		}
+		.caption {
+			text-align: center;
+		}
+	}
+	.block-right-2 {
+		float: right;
+		width: 290px;
+	}
+	.top {
+		position: relative;
+		margin-bottom: 35px;
+		margin-top: 10px;
+
+		.caption {
+			position: absolute;
+			top: 10px;
+			left: 125px;
+		}
+	}
+	.bot {
+		position: relative;
+		padding-top: 35px;
+		border-top: 1px solid $border-color;
+
+		.caption {
+			position: absolute;
+			top: 40px;
+			left: 125px;
+		}
+	}
+	.num-text {
+		margin-top: 15px;
+	}
+	.num {
+		margin-left: 0;
+		font-size: 22px;
+		color: #333;
+	}
+
+	.border-box {
+		@include clearfix();
+		border: 1px solid $border-color;
+		padding: 30px 20px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

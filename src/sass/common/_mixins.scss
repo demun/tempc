@@ -1,0 +1,26 @@
+// /*
+// ---------------------------------------------------------------
+// *
+// * mixins
+// *
+// ---------------------------------------------------------------
+// */
+
+@mixin clearfix() {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+// Box sizing
+@mixin box-sizing($boxmodel) {
+      box-sizing: $boxmodel;
+}
+
+
+@mixin ulstyle() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

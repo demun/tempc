@@ -1,0 +1,327 @@
+<div class="wrapper">
+    <div id="container">
+        <article id="bo_v">
+            <div id="bo_v_table" class="title">자유게시판3</div>
+            <header>
+                <h1 id="bo_v_title">갤러리 테스트</h1>
+            </header>
+            <!-- 히든처리 -->
+            <section id="bo_v_info">
+                <h2>페이지 정보</h2>
+                <strong><span class="sv_member">최고관리자</span>&nbsp;(61.37.147.250)</strong>
+                <span class="sound_only">작성일</span>
+                <strong>16-03-07 11:19</strong> 조회
+                <strong>1회</strong> 댓글
+                <strong>0건</strong>
+            </section>
+            <!--
+날짜 부분을 제외하고 전부 히든처리 
+    -->
+            <div class="date">16-03-07 11:19</div>
+            <!-- 관련링크 시작 { -->
+            <section id="bo_v_link">
+                <h2>관련링크</h2>
+                <ul>
+                </ul>
+            </section>
+            <!-- } 관련링크 끝 -->
+            <!-- 게시물 상단 버튼 시작 { -->
+            <div id="bo_v_top">
+                <ul class="bo_v_nb">
+                    <li><a href="./board.php?bo_table=free3&amp;wr_id=22" class="btn_b01">다음글</a></li>
+                </ul>
+                <ul class="bo_v_com">
+                    <li><a href="./write.php?w=u&amp;bo_table=free3&amp;wr_id=23&amp;page=" class="btn_b01">수정</a></li>
+                    <li><a href="./delete.php?bo_table=free3&amp;wr_id=23&amp;token=145731930556dced89db49b&amp;page=" class="btn_b01" onclick="del(this.href); return false;">삭제</a></li>
+                    <li><a href="./move.php?sw=copy&amp;bo_table=free3&amp;wr_id=23&amp;page=" class="btn_admin" onclick="board_move(this.href); return false;">복사</a></li>
+                    <li><a href="./move.php?sw=move&amp;bo_table=free3&amp;wr_id=23&amp;page=" class="btn_admin" onclick="board_move(this.href); return false;">이동</a></li>
+                    <li><a href="./board.php?bo_table=free3&amp;page=" class="btn_b01">목록</a></li>
+                    <li><a href="./write.php?w=r&amp;bo_table=free3&amp;wr_id=23" class="btn_b01">답변</a></li>
+                    <li><a href="./write.php?bo_table=free3" class="btn_b02">글쓰기</a></li>
+                </ul>
+            </div>
+            <!-- } 게시물 상단 버튼 끝 -->
+            <section id="bo_v_atc">
+                <h2 id="bo_v_atc_title">본문</h2>
+                <div id="bo_v_img">
+                    <a href="http://61.37.147.220/basic/bbs/view_image.php?bo_table=free3&amp;fn=1025872890_Ec6Y7NmA_img-12.gif" target="_blank" class="view_image"><img src="http://61.37.147.220/basic/data/file/free3/1025872890_Ec6Y7NmA_img-12.gif" alt="" width="250" title=""></a>
+                </div>
+                <!-- 본문 내용 시작 { -->
+                <div id="bo_v_con">내용내용내용내용내용내용내용내용내용내용내용
+                    <br>내용내용내용내용내용내용내용내용내용내용내용</div>
+                <!-- } 본문 내용 끝 -->
+                <!-- 스크랩 추천 비추천 시작 { -->
+                <div id="bo_v_act">
+                    <a href="./scrap_popin.php?bo_table=free3&amp;wr_id=23" target="_blank" class="btn_b01" onclick="win_scrap(this.href); return false;">스크랩</a>
+                </div>
+                <!-- } 스크랩 추천 비추천 끝 -->
+            </section>
+            <script>
+            // 글자수 제한
+            var char_min = parseInt(0); // 최소
+            var char_max = parseInt(0); // 최대
+            </script>
+            <!-- 댓글 시작 { -->
+            <section id="bo_vc">
+                <h2>댓글목록</h2>
+                <article id="c_24">
+                    <header>
+                        <h1>최고관리자님의 댓글</h1>
+                        <span class="member">최고관리자</span>
+                        <!-- 
+member-date 클래스 추가
+time 클래스 추가
+아이피 삭제
+ -->
+                        <span class="bo_vc_hdinfo">61.37.147.208</span> <span class="member-date">작성일:</span>
+                        <span class="bo_vc_hdinfo time"><time datetime="2016-03-07T19:47:00+09:00">16-03-07 19:47</time></span>
+                    </header>
+                    <!-- 댓글 출력 -->
+                    <p>
+                        안녕하세요 </p>
+                    <span id="edit_24"></span>
+                    <!-- 수정 -->
+                    <span id="reply_24"></span>
+                    <!-- 답변 -->
+                    <input type="hidden" value="" id="secret_comment_24">
+                    <textarea id="save_comment_24" style="display:none">안녕하세요</textarea>
+                    <footer>
+                        <ul class="bo_vc_act">
+                            <li><a href="./board.php?bo_table=free3&amp;wr_id=23&amp;c_id=24&amp;w=c#bo_vc_w" onclick="comment_box('24', 'c'); return false;">답변</a></li>
+                            <li><a href="./board.php?bo_table=free3&amp;wr_id=23&amp;c_id=24&amp;w=cu#bo_vc_w" onclick="comment_box('24', 'cu'); return false;">수정</a></li>
+                            <li><a href="./delete_comment.php?bo_table=free3&amp;comment_id=24&amp;token=145741517056de64020b7d3&amp;page=" onclick="return comment_delete();">삭제</a></li>
+                        </ul>
+                    </footer>
+                </article>
+                <article id="c_25">
+                    <header style="z-index:2">
+                        <h1>최고관리자님의 댓글</h1>
+                        <span class="member">최고관리자</span> 아이피
+                        <span class="bo_vc_hdinfo">61.37.147.208</span> 작성일
+                        <span class="bo_vc_hdinfo"><time datetime="2016-03-07T19:47:00+09:00">16-03-07 19:47</time></span>
+                    </header>
+                    <!-- 댓글 출력 -->
+                    <p>
+                        하이 </p>
+                    <span id="edit_25"></span>
+                    <!-- 수정 -->
+                    <span id="reply_25"></span>
+                    <!-- 답변 -->
+                    <input type="hidden" value="" id="secret_comment_25">
+                    <textarea id="save_comment_25" style="display:none">하이</textarea>
+                    <footer>
+                        <ul class="bo_vc_act">
+                            <li><a href="./board.php?bo_table=free3&amp;wr_id=23&amp;c_id=25&amp;w=c#bo_vc_w" onclick="comment_box('25', 'c'); return false;">답변</a></li>
+                            <li><a href="./board.php?bo_table=free3&amp;wr_id=23&amp;c_id=25&amp;w=cu#bo_vc_w" onclick="comment_box('25', 'cu'); return false;">수정</a></li>
+                            <li><a href="./delete_comment.php?bo_table=free3&amp;comment_id=25&amp;token=145741517056de64020b7d3&amp;page=" onclick="return comment_delete();">삭제</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            </section>
+            <!-- } 댓글 끝 -->
+            <!-- 댓글 쓰기 시작 { -->
+            <aside id="bo_vc_w">
+                <h2>댓글쓰기</h2>
+                <form name="fviewcomment" action="./write_comment_update.php" onsubmit="return fviewcomment_submit(this);" method="post" autocomplete="off">
+                    <input type="hidden" name="w" value="c" id="w">
+                    <input type="hidden" name="bo_table" value="free3">
+                    <input type="hidden" name="wr_id" value="23">
+                    <input type="hidden" name="comment_id" value="" id="comment_id">
+                    <input type="hidden" name="sca" value="">
+                    <input type="hidden" name="sfl" value="">
+                    <input type="hidden" name="stx" value="">
+                    <input type="hidden" name="spt" value="">
+                    <input type="hidden" name="page" value="">
+                    <input type="hidden" name="is_good" value="">
+                    <div class="tbl_frm01 tbl_wrap">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="wr_secret">비밀글사용</label>
+                                    </th>
+                                    <td>
+                                        <input type="checkbox" name="wr_secret" value="secret" id="wr_secret">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">내용</th>
+                                    <td>
+                                        <textarea id="wr_content" name="wr_content" maxlength="10000" required="" class="required" title="내용"></textarea>
+                                        <script>
+                                        $(document).on("keyup change", "textarea#wr_content[maxlength]", function() {
+                                            var str = $(this).val()
+                                            var mx = parseInt($(this).attr("maxlength"))
+                                            if (str.length > mx) {
+                                                $(this).val(str.substr(0, mx));
+                                                return false;
+                                            }
+                                        });
+                                        </script>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn_confirm">
+                        <input type="submit" id="btn_submit" class="btn_submit" value="댓글등록">
+                    </div>
+                </form>
+            </aside>
+            <script>
+            var save_before = '';
+            var save_html = document.getElementById('bo_vc_w').innerHTML;
+
+            function good_and_write() {
+                var f = document.fviewcomment;
+                if (fviewcomment_submit(f)) {
+                    f.is_good.value = 1;
+                    f.submit();
+                } else {
+                    f.is_good.value = 0;
+                }
+            }
+
+            function fviewcomment_submit(f) {
+                var pattern = /(^\s*)|(\s*$)/g; // \s 공백 문자
+
+                f.is_good.value = 0;
+
+                var subject = "";
+                var content = "";
+                $.ajax({
+                    url: g5_bbs_url + "/ajax.filter.php",
+                    type: "POST",
+                    data: {
+                        "subject": "",
+                        "content": f.wr_content.value
+                    },
+                    dataType: "json",
+                    async: false,
+                    cache: false,
+                    success: function(data, textStatus) {
+                        subject = data.subject;
+                        content = data.content;
+                    }
+                });
+
+                if (content) {
+                    alert("내용에 금지단어('" + content + "')가 포함되어있습니다");
+                    f.wr_content.focus();
+                    return false;
+                }
+
+                // 양쪽 공백 없애기
+                var pattern = /(^\s*)|(\s*$)/g; // \s 공백 문자
+                document.getElementById('wr_content').value = document.getElementById('wr_content').value.replace(pattern, "");
+                if (char_min > 0 || char_max > 0) {
+                    check_byte('wr_content', 'char_count');
+                    var cnt = parseInt(document.getElementById('char_count').innerHTML);
+                    if (char_min > 0 && char_min > cnt) {
+                        alert("댓글은 " + char_min + "글자 이상 쓰셔야 합니다.");
+                        return false;
+                    } else if (char_max > 0 && char_max < cnt) {
+                        alert("댓글은 " + char_max + "글자 이하로 쓰셔야 합니다.");
+                        return false;
+                    }
+                } else if (!document.getElementById('wr_content').value) {
+                    alert("댓글을 입력하여 주십시오.");
+                    return false;
+                }
+
+                if (typeof(f.wr_name) != 'undefined') {
+                    f.wr_name.value = f.wr_name.value.replace(pattern, "");
+                    if (f.wr_name.value == '') {
+                        alert('이름이 입력되지 않았습니다.');
+                        f.wr_name.focus();
+                        return false;
+                    }
+                }
+
+                if (typeof(f.wr_password) != 'undefined') {
+                    f.wr_password.value = f.wr_password.value.replace(pattern, "");
+                    if (f.wr_password.value == '') {
+                        alert('비밀번호가 입력되지 않았습니다.');
+                        f.wr_password.focus();
+                        return false;
+                    }
+                }
+
+
+                document.getElementById("btn_submit").disabled = "disabled";
+
+                return true;
+            }
+
+            function comment_box(comment_id, work) {
+                var el_id;
+                // 댓글 아이디가 넘어오면 답변, 수정
+                if (comment_id) {
+                    if (work == 'c')
+                        el_id = 'reply_' + comment_id;
+                    else
+                        el_id = 'edit_' + comment_id;
+                } else
+                    el_id = 'bo_vc_w';
+
+                if (save_before != el_id) {
+                    if (save_before) {
+                        document.getElementById(save_before).style.display = 'none';
+                        document.getElementById(save_before).innerHTML = '';
+                    }
+
+                    document.getElementById(el_id).style.display = '';
+                    document.getElementById(el_id).innerHTML = save_html;
+                    // 댓글 수정
+                    if (work == 'cu') {
+                        document.getElementById('wr_content').value = document.getElementById('save_comment_' + comment_id).value;
+                        if (typeof char_count != 'undefined')
+                            check_byte('wr_content', 'char_count');
+                        if (document.getElementById('secret_comment_' + comment_id).value)
+                            document.getElementById('wr_secret').checked = true;
+                        else
+                            document.getElementById('wr_secret').checked = false;
+                    }
+
+                    document.getElementById('comment_id').value = comment_id;
+                    document.getElementById('w').value = work;
+
+                    if (save_before)
+                        $("#captcha_reload").trigger("click");
+
+                    save_before = el_id;
+                }
+            }
+
+            function comment_delete() {
+                return confirm("이 댓글을 삭제하시겠습니까?");
+            }
+
+            comment_box('', 'c'); // 댓글 입력폼이 보이도록 처리하기위해서 추가 (root님)
+            </script>
+            <!-- } 댓글 쓰기 끝 -->
+            <!-- 링크 버튼 시작 { -->
+            <div id="bo_v_bot">
+                <ul class="bo_v_nb">
+                    <li><a href="./board.php?bo_table=free3&amp;wr_id=22" class="btn_b01"><i class="fa fa-angle-left"></i>이전글</a></li>
+                    <li><a href="./board.php?bo_table=free3&amp;wr_id=22" class="btn_b01">다음글<i class="fa fa-angle-right"></i></a></li>
+                </ul>
+                <!-- 
+.btn-list 추가
+         -->
+                <ul class="bo_v_com">
+                    <li><a href="./write.php?w=u&amp;bo_table=free3&amp;wr_id=23&amp;page=" class="btn_b01">수정</a></li>
+                    <li><a href="./delete.php?bo_table=free3&amp;wr_id=23&amp;token=145731930556dced89db49b&amp;page=" class="btn_b01" onclick="del(this.href); return false;">삭제</a></li>
+                    <li><a href="./move.php?sw=copy&amp;bo_table=free3&amp;wr_id=23&amp;page=" class="btn_admin" onclick="board_move(this.href); return false;">복사</a></li>
+                    <li><a href="./move.php?sw=move&amp;bo_table=free3&amp;wr_id=23&amp;page=" class="btn_admin" onclick="board_move(this.href); return false;">이동</a></li>
+                    <li><a href="./board.php?bo_table=free3&amp;page=" class="btn_b01 btn-list">목록</a></li>
+                    <li><a href="./write.php?w=r&amp;bo_table=free3&amp;wr_id=23" class="btn_b01">답변</a></li>
+                    <li><a href="./write.php?bo_table=free3" class="btn_b02">글쓰기</a></li>
+                </ul>
+            </div>
+            <!-- } 링크 버튼 끝 -->
+        </article>
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //.main-wrap .wrapper -->

@@ -1,0 +1,261 @@
+<div class="wrapper">
+    <div id="container">
+        <div class="title">주문상세내역</div>
+        <!-- 주문상세내역 시작 { -->
+        <div id="sod_fin">
+            <div id="sod_fin_no"><i class="fa fa-check-square-o"></i>주문번호 <strong>2016021908293423</strong></div>
+            <section id="sod_fin_list">
+                <h2>주문하신 상품</h2>
+                <div class="tbl_head02 tbl_wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" rowspan="2">이미지</th>
+                                <th scope="col" colspan="7" id="th_itname">상품명</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" id="th_itopt">옵션명</th>
+                                <th scope="col" id="th_itqty">수량</th>
+                                <th scope="col" id="th_itprice">판매가</th>
+                                <th scope="col" id="th_itsum">소계</th>
+                                <th scope="col" id="th_itpt">포인트</th>
+                                <th scope="col" id="th_itpt2">배송비</th>
+                                <th scope="col" id="th_itst">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" class="td_imgsmall"><img src="http://61.37.147.220/basic/shop/img/no_image.gif" width="70" height="70" alt=""></td>
+                                <td headers="th_itname" colspan="7"><a href="./item.php?it_id=1387869984">TH-베이직 슬림셔츠 블루</a></td>
+                            </tr>
+                            <tr>
+                                <td headers="th_itopt">SIZE:M / COLOR:베이지</td>
+                                <td headers="th_itqty" class="td_mngsmall">1</td>
+                                <td headers="th_itprice" class="td_numbig">347,000</td>
+                                <td headers="th_itsum" class="td_numbig">347,000</td>
+                                <td headers="th_itpt" class="td_num">3,000</td>
+                                <td headers="th_itpt2" class="td_dvr">선불</td>
+                                <td headers="th_itst" class="td_mngsmall">주문</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="sod_sts_wrap">
+                    <span class="sound_only">상품 상태 설명</span>
+                    <button type="button" id="sod_sts_explan_open" class="btn_frmline">상태설명보기</button>
+                    <div id="sod_sts_explan">
+                        <dl id="sod_fin_legend">
+                            <dt>주문</dt>
+                            <dd>주문이 접수되었습니다.</dd>
+                            <dt>입금</dt>
+                            <dd>입금(결제)이 완료 되었습니다.</dd>
+                            <dt>준비</dt>
+                            <dd>상품 준비 중입니다.</dd>
+                            <dt>배송</dt>
+                            <dd>상품 배송 중입니다.</dd>
+                            <dt>완료</dt>
+                            <dd>상품 배송이 완료 되었습니다.</dd>
+                        </dl>
+                        <button type="button" id="sod_sts_explan_close" class="btn_frmline">상태설명닫기</button>
+                    </div>
+                </div>
+                <!-- 클래스 추가 -->
+                <dl id="sod_bsk_tot">
+                    <dt class="sod_bsk_dvr odd">주문총액</dt>
+                    <dd class="sod_bsk_dvr even"><strong>347,000 원</strong></dd>
+                    <dt class="sod_bsk_cnt odd">총계</dt>
+                    <dd class="sod_bsk_cnt even"><strong>347,000 원</strong></dd>
+                    <dt class="sod_bsk_point odd">포인트</dt>
+                    <dd class="sod_bsk_point even"><strong>3,000 점</strong></dd>
+                </dl>
+            </section>
+            <div id="sod_fin_view">
+                <h2>결제/배송 정보</h2>
+                <section id="sod_fin_pay">
+                    <h3><i class="fa fa-money"></i>결제정보</h3>
+                    <div class="tbl_head01 tbl_wrap">
+                        <table>
+                            <colgroup>
+                                <col class="grid_3">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">주문번호</th>
+                                    <td>2016021908293423</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주문일시</th>
+                                    <td>2016-02-19 08:30:10</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">결제방식</th>
+                                    <td>무통장</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">결제금액</th>
+                                    <td>아직 입금되지 않았거나 입금정보를 입력하지 못하였습니다.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">입금자명</th>
+                                    <td>최고관리자</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">입금계좌</th>
+                                    <td>OO은행 12345-67-89012 예금주명</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section id="sod_fin_orderer">
+                    <h3><i class="fa fa-shopping-bag"></i>주문하신 분</h3>
+                    <div class="tbl_head01 tbl_wrap">
+                        <table>
+                            <colgroup>
+                                <col class="grid_3">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이 름</th>
+                                    <td>최고관리자</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">전화번호</th>
+                                    <td>000-000-0000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">핸드폰</th>
+                                    <td>000-000-0000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주 소</th>
+                                    <td>(07031) 서울 동작구 관악로30길 27, 상세주소 (사당동, 관악푸르지오)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">E-mail</th>
+                                    <td>admin@domain.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section id="sod_fin_receiver">
+                    <h3><i class="fa fa-gift"></i>받으시는 분</h3>
+                    <div class="tbl_head01 tbl_wrap">
+                        <table>
+                            <colgroup>
+                                <col class="grid_3">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이 름</th>
+                                    <td>최고관리자</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">전화번호</th>
+                                    <td>000-000-0000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">핸드폰</th>
+                                    <td>000-000-0000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주 소</th>
+                                    <td>(07031) 서울 동작구 관악로30길 27, 상세주소 (사당동, 관악푸르지오)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section id="sod_fin_dvr">
+                    <h3><i class="fa fa-truck"></i>배송정보</h3>
+                    <div class="tbl_head01 tbl_wrap">
+                        <table>
+                            <colgroup>
+                                <col class="grid_3">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="empty_table">아직 배송하지 않았거나 배송정보를 입력하지 못하였습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <section id="sod_fin_tot">
+                <h2>결제합계</h2>
+                <ul>
+                    <li>
+                        총 구매액
+                        <strong>347,000원</strong>
+                    </li>
+                    <li>미결제액
+                        <strong>347,000원</strong></li>
+                    <li id="alrdy">
+                        결제액
+                        <strong>0원</strong>
+                    </li>
+                </ul>
+            </section>
+            <section id="sod_fin_cancel">
+                <h2>주문취소</h2>
+                <button type="button" onclick="document.getElementById('sod_fin_cancelfrm').style.display='block';">주문 취소하기</button>
+                <div id="sod_fin_cancelfrm">
+                    <form method="post" action="./orderinquirycancel.php" onsubmit="return fcancel_check(this);">
+                        <input type="hidden" name="od_id" value="2016021908293423">
+                        <input type="hidden" name="token" value="168b01785950e9151ee41538dedc28d1">
+                        <label for="cancel_memo">취소사유</label>
+                        <input type="text" name="cancel_memo" id="cancel_memo" required="" class="frm_input required" size="40" maxlength="100">
+                        <input type="submit" value="확인" class="btn_frmline">
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- } 주문상세내역 끝 -->
+        <script>
+        $(function() {
+            $("#sod_sts_explan_open").on("click", function() {
+                var $explan = $("#sod_sts_explan");
+                if ($explan.is(":animated"))
+                    return false;
+
+                if ($explan.is(":visible")) {
+                    $explan.slideUp(200);
+                    $("#sod_sts_explan_open").text("상태설명보기");
+                } else {
+                    $explan.slideDown(200);
+                    $("#sod_sts_explan_open").text("상태설명닫기");
+                }
+            });
+
+            $("#sod_sts_explan_close").on("click", function() {
+                var $explan = $("#sod_sts_explan");
+                if ($explan.is(":animated"))
+                    return false;
+
+                $explan.slideUp(200);
+                $("#sod_sts_explan_open").text("상태설명보기");
+            });
+        });
+
+        function fcancel_check(f) {
+            if (!confirm("주문을 정말 취소하시겠습니까?"))
+                return false;
+
+            var memo = f.cancel_memo.value;
+            if (memo == "") {
+                alert("취소사유를 입력해 주십시오.");
+                return false;
+            }
+
+            return true;
+        }
+        </script>
+    </div>
+</div>
+<!-- //.main-wrap .wrapper -->

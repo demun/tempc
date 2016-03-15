@@ -1,0 +1,127 @@
+include "head.html"
+
+
+<div class="page-wrap" id="page-wrap">
+
+    <div class="login-wrap">
+        
+
+        <!-- 로그인 시작 { -->
+        <div id="mb_login" class="mbskin">
+            <h1>로그인</h1>
+
+            <form name="flogin" action="http://61.37.147.220/basic/bbs/login_check.php" onsubmit="return flogin_submit(this);" method="post">
+            <input type="hidden" name="url" value="http%3A%2F%2F61.37.147.220%2Fbasic%2Fshop%2Forderform.php%3Fsw_direct%3D1">
+
+            <fieldset id="login_fs">
+                <legend>회원로그인</legend>
+                <label for="login_id" class="login_id">회원아이디<strong class="sound_only"> 필수</strong></label>
+                <input type="text" name="mb_id" id="login_id" required class="frm_input required" size="20" maxLength="20">
+                <label for="login_pw" class="login_pw">비밀번호<strong class="sound_only"> 필수</strong></label>
+                <input type="password" name="mb_password" id="login_pw" required class="frm_input required" size="20" maxLength="20">
+                <input type="submit" value="로그인" class="btn_submit">
+                <input type="checkbox" name="auto_login" id="login_auto_login">
+                <label for="login_auto_login">자동로그인</label>
+            </fieldset>
+
+            <aside id="login_info">
+                <h2>회원로그인 안내</h2>
+                <p>
+                    회원아이디 및 비밀번호가 기억 안나실 때는 아이디/비밀번호 찾기를 이용하십시오.<br>
+                    아직 회원이 아니시라면 회원으로 가입 후 이용해 주십시오.
+                </p>
+                <div>
+                    <a href="http://61.37.147.220/basic/bbs/password_lost.php" target="_blank" id="login_password_lost" class="btn02">아이디 비밀번호 찾기</a>
+                    <a href="./register.php" class="btn01">회원 가입</a>
+                </div>
+            </aside>
+
+            </form>
+
+                
+                <!-- 주문하기, 신청하기 -->
+                
+            <section id="mb_login_notmb">
+                <h2>비회원 구매</h2>
+
+                <p>
+                    비회원으로 주문하시는 경우 포인트는 지급하지 않습니다.
+                </p>
+
+                <div id="guest_privacy">
+                            </div>
+
+                <label for="agree">개인정보수집에 대한 내용을 읽었으며 이에 동의합니다.</label>
+                <input type="checkbox" id="agree" value="1">
+
+                <div class="btn_confirm">
+                    <a href="javascript:guest_submit(document.flogin);" class="btn02">비회원으로 구매하기</a>
+                </div>
+
+                <script>
+                function guest_submit(f)
+                {
+                    if (document.getElementById('agree')) {
+                        if (!document.getElementById('agree').checked) {
+                            alert("개인정보수집에 대한 내용을 읽고 이에 동의하셔야 합니다.");
+                            return;
+                        }
+                    }
+
+                    f.url.value = "http://61.37.147.220/basic/shop/orderform.php?sw_direct=1";
+                    f.action = "http://61.37.147.220/basic/shop/orderform.php?sw_direct=1";
+                    f.submit();
+                }
+                </script>
+            </section>
+
+                
+                
+            <div class="btn_confirm">
+                <a href="http://61.37.147.220/basic/">메인으로 돌아가기</a>
+            </div>
+
+        </div>
+
+        <script>
+        $(function(){
+            $("#login_auto_login").click(function(){
+                if (this.checked) {
+                    this.checked = confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?");
+                }
+            });
+        });
+
+        function flogin_submit(f)
+        {
+            return true;
+        }
+        </script>
+        <!-- } 로그인 끝 -->
+
+        <!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+        <!--[if lte IE 7]>
+        <script>
+        $(function() {
+            var $sv_use = $(".sv_use");
+            var count = $sv_use.length;
+
+            $sv_use.each(function() {
+                $(this).css("z-index", count);
+                $(this).css("position", "relative");
+                count = count - 1;
+            });
+        });
+        </script>
+        <![endif]-->
+
+        
+
+    </div>
+
+
+</div>
+<!-- //.page-wrap -->
+
+
+include "js.html"

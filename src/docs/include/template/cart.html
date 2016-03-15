@@ -1,0 +1,172 @@
+<div class="wrapper">
+    <div id="container">
+        <!-- id 를 class 로 변경 -->
+        <div class="title">
+            장바구니
+            <span class="title-style-sub">장바구니에 담기 상품은 1일 동안 보관됩니다.</span>
+        </div>
+        <!-- 장바구니 시작 { -->
+        <script src="http://61.37.147.220/basic/js/shop.js"></script>
+        <div id="sod_bsk">
+            <form name="frmcartlist" id="sod_bsk_list" method="post" action="http://61.37.147.220/basic/shop/cartupdate.php">
+                <div class="tbl_head01 tbl_wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">상품이미지</th>
+                                <th scope="col">상품명</th>
+                                <th scope="col">총수량</th>
+                                <th scope="col">판매가</th>
+                                <th scope="col">소계</th>
+                                <th scope="col">포인트</th>
+                                <th scope="col">배송비</th>
+                                <th scope="col">
+                                    <label for="ct_all" class="sound_only">상품 전체</label>
+                                    <input type="checkbox" name="ct_all" value="1" id="ct_all" checked="checked">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sod_img"><img src="http://61.37.147.220/basic/data/item/1387871953/thumb-img08_70x70.gif" width="70" height="70" alt=""></td>
+                                <td>
+                                    <input type="hidden" name="it_id[0]" value="1387871953">
+                                    <input type="hidden" name="it_name[0]" value="TH-블락체크 셔츠-그레이2">
+                                    <a href="./item.php?it_id=1387871953"><b>TH-블락체크 셔츠-그레이2</b></a>
+                                    <div class="sod_opt">
+                                        <ul>
+                                            <li>SIZE:M / COLOR:레드 1개 (+2,100원)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="sod_option_btn">
+                                        <button type="button" class="mod_options">선택사항수정</button>
+                                    </div>
+                                </td>
+                                <td class="td_num">1</td>
+                                <td class="td_numbig">31,000</td>
+                                <td class="td_numbig"><span id="sell_price_0">33,100</span></td>
+                                <td class="td_numbig">300</td>
+                                <td class="td_dvr">선불</td>
+                                <td class="td_chk">
+                                    <label for="ct_chk_0" class="sound_only">상품</label>
+                                    <input type="checkbox" name="ct_chk[0]" value="1" id="ct_chk_0" checked="checked">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sod_img"><img src="http://61.37.147.220/basic/shop/img/no_image.gif" width="70" height="70" alt=""></td>
+                                <td>
+                                    <input type="hidden" name="it_id[1]" value="1387871946">
+                                    <input type="hidden" name="it_name[1]" value="TH-블락체크 셔츠-레드2">
+                                    <a href="./item.php?it_id=1387871946"><b>TH-블락체크 셔츠-레드2</b></a>
+                                    <div class="sod_opt">
+                                        <ul>
+                                            <li>SIZE:L / COLOR:블루 1개 (+1,000원)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="sod_option_btn">
+                                        <button type="button" class="mod_options">선택사항수정</button>
+                                    </div>
+                                </td>
+                                <td class="td_num">1</td>
+                                <td class="td_numbig">31,000</td>
+                                <td class="td_numbig"><span id="sell_price_1">32,000</span></td>
+                                <td class="td_numbig">0</td>
+                                <td class="td_dvr">선불</td>
+                                <td class="td_chk">
+                                    <label for="ct_chk_1" class="sound_only">상품</label>
+                                    <input type="checkbox" name="ct_chk[1]" value="1" id="ct_chk_1" checked="checked">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <dl id="sod_bsk_tot">
+                    <dt class="sod_bsk_cnt">총계 가격/포인트</dt>
+                    <dd class="sod_bsk_cnt"><strong>65,100 원 / 300 점</strong></dd>
+                </dl>
+                <div id="sod_bsk_act">
+                    <input type="hidden" name="url" value="./orderform.php">
+                    <input type="hidden" name="records" value="2">
+                    <input type="hidden" name="act" value="">
+                    <a href="http://61.37.147.220/basic/shop/list.php?ca_id=2010101010" class="btn01">쇼핑 계속하기</a>
+                    <button type="button" onclick="return form_check('buy');" class="btn_submit">주문하기</button>
+                    <button type="button" onclick="return form_check('seldelete');" class="btn01">선택삭제</button>
+                    <button type="button" onclick="return form_check('alldelete');" class="btn01">비우기</button>
+                </div>
+            </form>
+        </div>
+        <script>
+        $(function() {
+            var close_btn_idx;
+
+            // 선택사항수정
+            $(".mod_options").click(function() {
+                var it_id = $(this).closest("tr").find("input[name^=it_id]").val();
+                var $this = $(this);
+                close_btn_idx = $(".mod_options").index($(this));
+
+                $.post(
+                    "./cartoption.php", {
+                        it_id: it_id
+                    },
+                    function(data) {
+                        $("#mod_option_frm").remove();
+                        $this.after("<div id=\"mod_option_frm\"></div>");
+                        $("#mod_option_frm").html(data);
+                        price_calculate();
+                    }
+                );
+            });
+
+            // 모두선택
+            $("input[name=ct_all]").click(function() {
+                if ($(this).is(":checked"))
+                    $("input[name^=ct_chk]").attr("checked", true);
+                else
+                    $("input[name^=ct_chk]").attr("checked", false);
+            });
+
+            // 옵션수정 닫기
+            $(document).on("click", "#mod_option_close", function() {
+                $("#mod_option_frm").remove();
+                $(".mod_options").eq(close_btn_idx).focus();
+            });
+            $("#win_mask").click(function() {
+                $("#mod_option_frm").remove();
+                $(".mod_options").eq(close_btn_idx).focus();
+            });
+
+        });
+
+        function form_check(act) {
+            var f = document.frmcartlist;
+            var cnt = f.records.value;
+
+            if (act == "buy") {
+                if ($("input[name^=ct_chk]:checked").size() < 1) {
+                    alert("주문하실 상품을 하나이상 선택해 주십시오.");
+                    return false;
+                }
+
+                f.act.value = act;
+                f.submit();
+            } else if (act == "alldelete") {
+                f.act.value = act;
+                f.submit();
+            } else if (act == "seldelete") {
+                if ($("input[name^=ct_chk]:checked").size() < 1) {
+                    alert("삭제하실 상품을 하나이상 선택해 주십시오.");
+                    return false;
+                }
+
+                f.act.value = act;
+                f.submit();
+            }
+
+            return true;
+        }
+        </script>
+        <!-- } 장바구니 끝 -->
+    </div>
+</div>
+<!-- //.main-wrap .wrapper -->

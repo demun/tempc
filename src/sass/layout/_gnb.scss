@@ -1,0 +1,106 @@
+/**
+ * 메인메뉴 
+ * 하위메뉴가 한번에 모두 내려오는 타입
+ * 
+ */
+
+.gnb-bg {
+    height: 0;
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+}
+
+
+
+
+.gnb-wrap {
+
+    // height: 45px;
+    height: auto;
+    overflow: hidden;
+    
+    &.active {
+      height: 100%;
+      overflow: visible;
+    }
+
+    .gnb-list {
+      width: 100%;
+      @include ulstyle();
+      @include clearfix();
+      li {
+        position: relative;
+        display: table-cell;
+        width: 1%;
+        a {
+          display: block;
+          position: relative;
+          padding: 10px;
+          width: auto;
+          white-space: nowrap; // 줄바꿈방지
+          color: #fff;
+          // font-size: 112.5%; //18px
+          font-size: 18px;
+          &:hover {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+
+        ul {
+          @include clearfix();
+          // display: block;
+          display: none;
+
+          background-image: url(../images/bg-gnb-a.gif);
+          background-repeat: repeat-y;
+          padding-left: 0;
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          // height: 334px; // 왼쪽이미지때문에 고정 높이를 사용해야됨
+          // height: 540%; // 왼쪽이미지때문에 고정 높이를 사용해야됨
+          li {
+            display: block;
+            width: auto;
+            border-left: 1px solid #eee;
+            &:hover {
+              border-left-color: $link-hover-color;
+              li {
+                border-left: 0;
+              }
+            }
+            a {
+              float: none;
+              font-size: 13px;
+              padding: 5px 15px;
+            }
+
+            ul {
+              position: relative;
+              margin: 0 0 0 20px;
+              background-image: none;
+              height: auto;
+              li {
+                border-left: 0;
+                a {
+                  padding-top: 2px 15px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            } // ul ul ul
+          }
+        } // gnb ul ul
+      }
+    }
+
+
+  
+} // gnb

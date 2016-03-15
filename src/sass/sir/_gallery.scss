@@ -1,0 +1,439 @@
+/*
+---------------------------------------------------------------
+*
+* gallery 갤러리
+*
+---------------------------------------------------------------
+*/
+
+#gall_ul,
+.gall_con {
+	@include ulstyle();
+}
+#gall_ul {
+	@include clearfix();
+	@include ulstyle();
+	margin-top: 10px;
+
+	&.li-3 {
+		.gall_li {
+			width: 33.3%;
+			// height: 450px;
+			// float: left;
+			&:nth-child(3) {
+				ul {
+					// margin-right: 0;
+				}
+			}
+			&:nth-child(4) {
+				clear: both;
+			}
+		}
+	}
+	&.li-4 {
+		.gall_li {
+			width: 25%;
+			&:nth-child(4) {
+				ul {
+					// margin-right: 0;
+				}
+			}
+			&:nth-child(5) {
+				clear: both;
+			}
+		}
+	}
+	&.li-5 {
+		.gall_li {
+			width: 20%;
+			&:nth-child(5) {
+				ul {
+					margin-right: 0;
+				}
+			}
+			&:nth-child(6) {
+				clear: both;
+			}
+		}
+	}
+}
+.gall_li {
+	float: left;
+	// height: 400px; // 고정너비가 없는경우
+}
+.gall_con {
+	margin: 0 70px 60px 0;
+	padding-bottom: 15px;
+	border: 1px solid $border-color;
+	a {
+		text-decoration: none;
+	}
+	li {
+		line-height: 1.4;
+		color: #666;
+	}
+
+	.gall_href {
+		padding: 0;
+		a {
+			display: block;
+		}
+		img {
+			// width: 320px;
+			// height: 300px;
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+	.gall_text_href {
+		padding: 10px;
+		a {
+			color: $link-color;
+		}
+	}
+	.gall_subject {
+		padding: 0 10px;
+		color: #666;
+		font-size: 13px;
+		display: inline-block;
+		width: 60px;
+	}
+
+}
+
+
+
+#bo_gall {
+	@include clearfix();
+	margin-bottom: 80px;
+
+	.bo_fx {
+		margin-top: 40px;
+		@include clearfix();
+	}
+	#bo_list_total {
+		float: left;
+	}
+	.btn_admin {
+		@extend %btnSubmit;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.btn_bo_user {
+		@include ulstyle();
+		float: right;
+
+		li {
+			float: left;
+			margin-right: 5px;
+		}
+	}
+
+
+	.btn_bo_adm {
+		float: left;
+		li {
+			float: left;
+
+			input {
+				padding: 5px 20px;
+				margin-right: 5px;
+				cursor: pointer;
+			}
+		}
+	}
+
+}
+
+
+
+
+// galley3
+#bo_v {
+	@include clearfix();
+	margin-bottom: 100px;
+
+	#bo_v_title {
+		font-size: 18px;
+		color: $text-color;
+	}
+
+	// 페이지정보
+	#bo_v_info {
+		display: none;
+	}
+	
+	.date {
+		font-size: 13px;
+		color: #999;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #989898;
+	}
+
+	// 관련링크
+	#bo_v_link {
+		display: none;
+	}
+
+	// 게시물 상단 버튼
+	#bo_v_top {
+		display: none;
+		@include clearfix();
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	
+
+
+	// 본문
+	#bo_v_atc {
+		@include clearfix();
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-top: 1px solid #989898;
+		border-bottom: 1px solid $border-color;
+	}
+	#bo_v_atc_title {
+		display: none;
+	}
+
+	// 본문 내용
+	#bo_v_con {
+		width: 100%;
+	}
+
+	// 스크랩 추천 비추천
+	#bo_v_act {
+		// display: none;
+		margin-bottom: 30px;
+	    text-align: center;
+	}
+
+	// 댓글목록
+	#bo_vc {
+		// display: none;
+		margin: 0 0 20px;
+	    padding: 20px 0;
+	    border: 0 none;
+	    background: #fff;
+	    h2 {
+	    	color: #333;
+	    	padding: 0 20px;
+	    	font-weight: 400;
+	    	font-size: 14px;
+	    	margin: 0;
+	    	border-bottom: 1px solid $border-color;
+	    	padding-bottom: 5px;
+	    	+ article {
+	    		margin-top: 3px;
+	    	}
+	    }
+	    article {
+	    	background-color: #f7f7f7;
+	    	border-top: 1px solid $border-color;
+	    	padding-bottom: 10px;
+	    	@include clearfix();
+	    }
+	    h1 {
+	    	display: none;
+	    }
+	    header  {
+	    	padding: 10px 20px;
+	    }
+	    .member {
+	    	font-size: 14px;
+	    	margin: 0;
+	    	color: #333;
+	    }
+	    
+    	.member-date {
+			color: #333;
+			margin-left: 50px;
+    	}
+	    .bo_vc_hdinfo {
+	    	display: none;
+
+	    	&.time {
+	    		display: inline-block;
+	    		color: #666;
+		    }
+	    }
+	    p {
+	    	font-size: 13px;
+	    	color: #666;
+	    	padding-left: 20px;
+	    	padding-right: 20px;
+	    }
+	    .bo_vc_act {
+	    	@include ulstyle();
+	    	@include clearfix();
+	    	float: right;
+	    	margin-right: 20px;
+
+	    	li {
+	    		float: left;
+	    		margin-left: 10px;
+	    		a {
+	    			font-size: 13px;
+	    			color: $text-color;
+	    		}
+	    	}
+	    }
+	}
+
+
+
+
+
+	// 댓글쓰기
+	#bo_vc_w {
+		h2 {
+			display: none;
+		}
+		.tbl_frm01 {
+			margin-bottom: 20px;
+			th {
+				width: 150px;
+				border: 1px solid $border-color;
+				border-left: 0 none;
+				background: #f7f7f7;
+				text-align: center;
+				font-weight: 400;
+				label {
+					font-weight: 400;
+				}
+			}
+			td {
+				border: 1px solid $border-color;
+				border-right: 0 none;
+				textarea {
+					height: 200px;
+					width: 100%;
+				}
+			}
+		}
+		.btn_submit {
+			@extend %btnBlack;
+		}
+	}
+
+
+
+
+
+
+	// 링크버튼
+	#bo_v_bot {
+		@include clearfix();
+		padding-top: 20px;
+		margin-top: 100px;
+		border-top: 1px solid #000;
+
+		.bo_v_nb {
+			@include ulstyle();
+			@include clearfix();
+			float: left;
+			li {
+				float: left;
+				margin-right: 3px;
+			}
+		}
+		.bo_v_com {
+			float: right;
+			@include ulstyle();
+			@include clearfix();
+
+			li {
+				float: left;
+				margin-right: 3px;
+			}
+
+		}
+	}
+	.btn_b01,
+	.btn_admin {
+		@extend %btnStyle;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		.fa-angle-left {
+			margin-right: 5px;
+		}
+		.fa-angle-right {
+			margin-left: 5px;
+		}
+	}
+	.btn_b02 {
+		@extend %btnSubmit;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.btn-list {
+		@extend %btnBlack;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+}
+
+
+
+
+
+// gallery4, 갤러리 쓰기
+#bo_w {
+	margin-bottom: 80px;
+
+	#container_title {
+		@extend %title;
+	}
+
+	#fwrite {
+		margin-top: 40px;
+	}
+	.tbl_frm01 {
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #333;
+
+		th {
+			@extend %thStyle;
+			width: 140px;
+			text-align: center;
+			border-top: 0 none;
+			border-right: 1px solid $border-color;
+		}
+		td {
+			border-top: 1px solid $border-color;
+		}
+		textarea {
+			height: 100px;
+		}
+
+	}
+
+	// 임시저장된 글 목록
+	#autosave_pop {
+		display: none;
+	}
+
+	.btn_submit {
+		@extend %btnBlack;
+	}
+	.btn_cancel {
+		@extend %btnStyle;
+	}
+
+}
+
+
+
+
+// write 일반게시판 쓰기
+
+.cke_sc {
+	display: none;
+}
+
+

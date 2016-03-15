@@ -1,0 +1,77 @@
+// /*
+// ---------------------------------------------------------------
+// *
+// * variables
+// *
+// ---------------------------------------------------------------
+// */
+
+
+
+// 기본 전역 설정
+//** Background color for `<body>`.
+$body-bg                  : #fff;
+//** Global text color on `<body>`.
+$text-color               : #454545;
+
+//** Global textual link color.
+$link-color               : #333;
+//** Link hover color set via `darken()` function.
+$link-hover-color         : darken($link-color, 15%);
+//** Link hover decoration.
+$link-hover-decoration    : underline;
+
+
+// 폰트: 나눔고딕, 나눔바른고딕, 본고딕
+// $font-family-base: "Nanum Gothic", "Nanum Barun Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $font-family-base   : "Nanum Barun Gothic", Helvetica, Arial, sans-serif;
+$font-family-base   : "Noto Sans Korean", Helvetica, Arial, sans-serif;
+$font-size-base           : 14px;
+// $font-size-base        : 87.5%;
+// $font-size-base        : 100%;
+
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base         : 1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed     : floor(($font-size-base * $line-height-base)); // ~20px
+
+
+
+// 레이아웃
+$container-width         : 100%;
+$wrapper-width            : 1200px;
+$quick-width                : 190px;
+$rnb-width                : 190px;
+$lnb-width                : 200px;
+
+
+// border
+$border-color             : #dbdbdb;
+
+
+
+$active-bg               : #f37e21;
+$main-bg: #33383b;
+
+
+
+// table
+$table-bg                 : #464646;
+$table-font-color         : #fff;
+
+
+
+
+// B type
+$wrapper-width-b: 1100px;
+
+
+
+
+// 영카트
+$th-bg: #f7f7f7;
+$sub-width: ($wrapper-width - 80); //1120px
+
+
+

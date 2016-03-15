@@ -1,0 +1,24 @@
+{
+  "name": "SiteName",
+  "version": "0.1.0",
+  "authors": "demun",
+  "email": "<hjm01@naver.com>",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "latest",
+    "jquery-migrate": "latest",
+    "fafnur-bxslider": "latest",
+    "fontawesome": "latest",
+    "noto-sans-scott": "latest",
+    "bootstrap-sass": "latest",
+    "smooth-scroll": "latest",
+    "jquery.easing": "latest"
+  }
+}

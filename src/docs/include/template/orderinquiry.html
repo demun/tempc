@@ -1,0 +1,58 @@
+<div class="wrapper">
+    <div id="container">
+        <!-- 
+					아이디 변경
+					#sod_v_info 를 .title-style-sub 로 변경
+				 -->
+        <div class="title">
+            주문내역조회
+            <span class="title-style-sub">주문서번호 링크를 누르시면 주문상세내역을 조회하실 수 있습니다.</span>
+        </div>
+        <!-- 주문 내역 시작 { -->
+        <div id="sod_v">
+            <p id="sod_v_info">주문서번호 링크를 누르시면 주문상세내역을 조회하실 수 있습니다.</p>
+            <!-- 주문 내역 목록 시작 { -->
+            <div class="tbl_head01 tbl_wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">주문서번호</th>
+                            <th scope="col">주문일시</th>
+                            <th scope="col">상품수</th>
+                            <th scope="col">주문금액</th>
+                            <th scope="col">입금액</th>
+                            <th scope="col">미입금액</th>
+                            <th scope="col">상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="ct_id[0]" value="">
+                                <a href="http://61.37.147.220/basic/shop/orderinquiryview.php?od_id=2016021908293423&amp;uid=baa2b2ef01d19787431b5dce3e31ab43">2016021908293423</a>
+                            </td>
+                            <td>16-02-19 08:30 (금)</td>
+                            <td class="td_num">1</td>
+                            <td class="td_numbig">347,000원</td>
+                            <td class="td_numbig">0원</td>
+                            <td class="td_numbig">347,000원</td>
+                            <td>입금확인중</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- } 주문 내역 목록 끝 -->
+            <nav class="pg_wrap">
+                <span class="pg">
+			                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=1" class="pg_page pg_start"><i class="fa fa-angle-double-left"></i></a>
+			                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=1" class="pg_page">1<span class="sound_only">페이지</span></a>
+                <span class="sound_only">열린</span><strong class="pg_current">2</strong><span class="sound_only">페이지</span>
+                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=3" class="pg_page pg_end"><i class="fa fa-angle-double-right"></i></a>
+                </span>
+            </nav>
+        </div>
+        <!-- } 주문 내역 끝 -->
+    </div>
+</div>
+<!-- //.main-wrap .wrapper -->

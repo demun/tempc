@@ -1,0 +1,184 @@
+/*
+---------------------------------------------------------------
+*
+* mypage 마이페이지
+*
+*
+---------------------------------------------------------------
+*/
+
+
+// .main-wrap {
+
+#smb_my {
+	margin-bottom: 140px;
+}
+
+#smb_my_ov {
+	margin-top: 40px;
+	padding-bottom: 50px;
+	position: relative;
+
+	h2 {
+		@extend %h2;
+	}
+
+	dl {
+		margin-top: 40px;
+	}
+}
+#smb_my_act {
+	position: absolute;
+	right: 0;
+	top: -7px;
+	ul {
+		@include ulstyle();
+		@include clearfix();
+		li {
+			float: left;
+		}
+	}
+	a {
+		display: block;
+		margin-left: 5px;
+		@extend %btnStyle;
+		width: 100px;
+		padding: 5px;
+		&.btn_admin {
+			@extend %btnSubmit;
+			width: 80px;
+			padding: 5px;
+		}
+		&.btn02 {
+			@extend %btnSubmit;
+			width: 80px;
+			background: #454545;
+			padding: 5px;
+		}
+	}
+}
+
+
+
+// 사용자정의 테이블
+.tbl-1 {
+	margin-top: 40px;
+	table {
+		width: 100%;
+		border-top: 1px solid #afafaf;
+		border-bottom: 1px solid #333;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	}
+	thead {
+		// &:first-child th {
+		// 	border-left: 0 none;
+		// }
+		th {
+			&:first-child {
+				border-left: 0 none;
+			}
+			width: 20%;
+			@extend %thStyle;
+			font-size: 15px;
+			text-align: center;
+			border-left: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+		}
+	}
+	tbody {
+		td {
+			&:first-child {
+				border-left: 0 none;
+			}
+			text-align: center;
+			padding: 12px 10px;
+			font-size: 13px;
+			border-left: 1px solid $border-color;
+			.tbl-text-1 {
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+// 최근주문내역
+#smb_my_od {
+	h2 {
+		@extend %subTitle;
+	}
+	.tbl_head01 tbody td {
+		text-align: center;
+		color: #666;
+	}
+}
+.smb_my_more {
+	text-align: right;
+	.btn01 {
+		@extend %btnSubmit;
+		// width: 150px;
+		i {
+			margin-right: 5px;
+		}
+	}
+}
+
+
+// 최근위시리스트
+#smb_my_wish {
+	@extend %subTitle;
+	.tbl_head01 {
+		border-bottom: 1px solid #000;
+	}
+	td {
+		font-size: 14px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.td_datetime {
+		width: 230px;
+		text-align: center;
+	}
+	.smb_my_img {
+		width: 200px;
+		text-align: center;
+	}
+	.btn01 {
+		@extend %btnSubmit;
+		// width: 180px;
+		i {
+			margin-right: 5px;
+			color: #fff;
+		}
+	}
+}
+
+
+
+
+// 쪽지보내기
+#memo_write {
+	#captcha {
+		#captcha_key  {
+			height: 43px;
+			margin: 0 0 0 20px;
+		}
+	}
+}
+
+
+.new_win {
+	// 새창 스크롤 없애기
+	.tbl_frm01 {
+		width: auto;
+	}
+	.win_btn {
+		.btn_submit {
+			@extend %btnSubmit;
+		}
+		button {
+			@extend %btnBlack;
+		}
+	}
+}
+

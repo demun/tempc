@@ -1,0 +1,62 @@
+/*
+---------------------------------------------------------------
+*
+* typography | title, text
+*
+---------------------------------------------------------------
+*/
+
+
+
+.title-01 {
+	font-size: 24px;
+	margin-bottom: 5px;
+}
+
+// btype
+.btype {
+	// @extend .title-01;
+	margin-bottom: 10px;
+	border-bottom: 1px solid $border-color;
+	.black {
+		border-bottom: 2px solid $link-color;
+		display: inline-block
+	}
+}
+
+
+
+
+// main page
+.text-1 {
+	font-size: 14px;
+	color: #454545;
+	text-align: center;
+	border-bottom: 2px dotted $border-color;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+.text-2 {
+	font-size: 13px;
+	color: $text-color;
+	margin: 10px 0 0;
+}
+
+.num-none {
+	color: #666;
+	text-decoration: line-through;
+}
+.num {
+	color: #333;
+	font-size: 17px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+
+
+
+
+
+

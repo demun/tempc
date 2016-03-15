@@ -1,0 +1,103 @@
+/*** adding the class sf-navbar in addition to sf-menu creates an all-horizontal nav-bar menu ***/
+
+.sf-navbar {
+  background: #BDD2FF;
+  position: relative;
+  margin-bottom: 5em;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background-color: #BDD2FF;
+    height: 200%;
+    width: 100%;
+  }
+  ul {
+    box-shadow: none;
+  }
+  li {
+    background: #AABDE6;
+    position: static;
+  }
+  > li > {
+    a {
+      border: none;
+    }
+    ul {
+      > li > a {
+        border: none;
+      }
+      min-width: 36em;
+      /* set this to whatever suits your design */
+    }
+  }
+  ul {
+    li {
+      background: #BDD2FF;
+      position: relative;
+    }
+    ul {
+      left: 0;
+      top: 100%;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  > li > ul > li {
+    float: left;
+  }
+  li {
+    &.current, &:hover, &.sfHover {
+      background: #BDD2FF;
+    }
+  }
+  ul {
+    li {
+      &.current {
+        background: #BDD2FF;
+      }
+      &:hover, &.sfHover {
+        background: #D1DFFF;
+      }
+    }
+    ul li {
+      background: #D1DFFF;
+      &:hover, &.sfHover, &.current {
+        background: #E6EEFF;
+      }
+    }
+    li.current > a {
+      font-weight: bold;
+    }
+  }
+}
+
+/* provide background colour for submenu strip */
+/* you should just set the menu's container bg colour rather than use pseudo-elements */
+
+/*** point all arrows down ***/
+
+.sf-arrows.sf-navbar ul {
+  .sf-with-ul:after {
+    margin-top: -3px;
+    margin-right: 0;
+    border-color: transparent;
+    border-top-color: #dFeEFF;
+    /* edit this to suit design (no rgba in IE8) */
+    border-top-color: rgba(255, 255, 255, 0.5);
+  }
+  > {
+    li {
+      > .sf-with-ul:focus:after, &:hover > .sf-with-ul:after {
+        border-color: transparent;
+        border-top-color: white;
+      }
+    }
+    .sfHover > .sf-with-ul:after {
+      border-color: transparent;
+      border-top-color: white;
+    }
+  }
+}

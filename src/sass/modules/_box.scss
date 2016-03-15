@@ -1,0 +1,51 @@
+/*
+---------------------------------------------------------------
+*
+* module / box
+*
+---------------------------------------------------------------
+*/
+
+
+.box-border {
+    @include ulstyle();
+    @include clearfix();
+    border: 1px solid $border-color;
+    padding: 30px 40px;
+    width: 100%;
+
+    li {
+        float: left;
+        width: 25%;
+        margin-bottom: 70px;
+        // height: 310px;
+
+        a {
+            display: block;
+            text-decoration: none;
+            margin: 0 20px;
+
+        }
+        &.mb-0 {
+            margin-bottom: 0;
+        }
+    }
+    // 첫번째부터 마진값 제거
+    &.li-1 {
+        li {
+            margin-bottom: 0;
+        }
+    }
+    // 5번째부터 마진값 제거
+    &.li-5 {
+        li {
+            margin-bottom: 0;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-bottom: 70px;
+            }
+        }
+    }
+}

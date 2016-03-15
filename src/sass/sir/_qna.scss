@@ -1,0 +1,77 @@
+/*
+---------------------------------------------------------------
+*
+* qna
+*
+---------------------------------------------------------------
+*/
+
+
+#bo_list {
+	margin-bottom: 100px;
+
+	.tbl_head01 {
+		margin-top: 50px;
+		caption {
+			padding: 0;
+		    font-size: 0;
+		    line-height: 0;
+		    overflow: hidden;
+		}
+		td {
+			text-align: center;
+			&.td_subject {
+				text-align: left;
+			}
+		}
+	}
+
+}
+.bo_fx {
+	text-align: right;
+
+	ul {
+		@include ulstyle();
+	}
+
+	.btn_b02 {
+		@extend %btnBlack;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		i {
+			margin-right: 5px;
+		}
+	}
+}
+
+
+.faq_1 {
+	margin-bottom: 150px;
+}
+
+
+#bo_sch {
+	margin-top: 40px;
+	border: 0 none;
+	text-align: right;
+
+	legend {
+		display: none;
+	}
+
+	select {
+		width: 130px;
+		padding: 3px;
+		vertical-align: middle;
+	}
+	input[type="text"] {
+		width: 200px;
+	}
+	.btn_submit {
+		@extend %btnSubmit;
+		padding: 5px 20px;
+	}
+}
+
+
+

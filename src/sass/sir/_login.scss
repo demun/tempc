@@ -1,0 +1,340 @@
+/*
+---------------------------------------------------------------
+*
+* login
+*
+* 회원정보찾기 팝업
+*
+---------------------------------------------------------------
+*/
+
+.btn_confirm {
+	text-align: center;
+}
+
+
+.login-wrap {
+	width: 680px;
+	margin: 130px auto;
+
+	// 비회원로그인
+	h1 {
+		&.login-title {
+			font-size: 35px;
+		}
+	}
+	h2 {
+		&.login-title {
+			font-size: 25px;
+		}
+	}
+	.login-title {
+		display: block;
+		color: $text-color;
+		font-weight: 400;
+		padding-bottom: 15px;
+		border-bottom: 1px solid $border-color;
+
+		&.icon {
+			padding-left: 50px;
+			background: url(../images/icon/login2.png) no-repeat left 7px;
+		}
+		&.bdb-orange {
+			border-bottom: 2px solid $active-bg;
+		}
+
+		.login-info {
+			font-size: 15px;
+			color: #666;
+		}
+	}
+	.login_fs,
+	#mb_login_od {
+		width: 426px;
+		margin: 60px auto 0;
+		position: relative;
+		border: 0 none;
+		padding: 0;
+		
+		legend,
+		.sound_only {
+			display: none;
+		}
+	}
+	.login-id-wrap {
+		margin-bottom: 5px;
+
+	}
+	.login-id-wrap,
+	.login-pw-wrap {
+		label {
+			width: 90px;
+			display: inline-block;
+		}
+		input {
+			width: 240px;
+			padding: 0 5px;
+			background-color: #fff !important;
+			border: 1px solid $border-color;
+			height: auto;
+		}
+		legend,
+		.sound_only {
+			display: none;
+		}
+	}
+	.btn_submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #848484;
+		color: #fff;
+		width: 85px;
+		height: 65px;
+		display: inline-block;
+		border: 0 none;
+	}
+	.login-auto-wrap {
+		margin: 15px 0 0 90px;
+		input {
+			margin-right: 5px;
+		}
+	}
+
+	#login_info {
+		margin: 40px 0;
+		padding: 0 0 15px;
+		text-align: right;
+		border-bottom: 1px solid $border-color;
+
+		h2,p {
+			display: none;
+		}
+		.btn01,
+		.btn02 {
+			font-size: 12px;
+			background-color: transparent;
+			border: 0 none;
+			color: $link-color;
+			padding: 0 10px;
+			line-height: 1;
+			i {
+				margin-right: 5px;
+			}
+		}
+		.btn02 {
+			border-right: 1px solid #333;
+		}
+	}
+
+	// 주문하기, 신청하기
+	#mb_login_notmb {
+		margin-bottom: 40px;
+
+		#guest_privacy {
+			margin: 40px 0 10px;
+		    padding: 20px 25px;
+		    height: 130px;
+		    border: 1px solid $border-color;
+		    overflow: auto;
+		}
+	}
+	.agree-wrap {
+		margin-top: 10px;
+	}
+	.btn-confirm {
+		text-align: right;
+		margin-top: 20px;
+		padding-bottom: 20px;
+		border-bottom: 2px solid #000;
+
+		.btn02 {
+			padding: 10px 40px;
+			color: #fff;
+			background-color: #848484;
+			border-color: #848484;
+		}
+	}
+
+
+	#mb_login_odinfo {
+		margin-top: 80px;
+		margin-bottom: 40px;
+		border-bottom: 1px solid #000;
+		padding-bottom: 20px;
+
+		h2 {
+			font-size: 16px;
+			padding-left: 8px;
+			position: relative;
+			font-weight: 400;
+			margin-bottom: 5px;
+			
+			&:before {
+				content: '';
+				width: 3px;
+				height: 3px;
+				background-color: #333;
+				position: absolute;
+				top: 10px;
+				left: 0;
+			}
+		}
+		p {
+			color: #999;
+		}
+	}
+
+
+	// sns
+	.sns-wrap {
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid #000;
+
+		.sns-text {
+			font-size: 20px;
+			color: #666;
+			text-align: center;
+		}
+		.sns-link {
+			@include ulstyle();
+			width: 230px;
+			margin: 20px auto 0;
+			li {
+				display: table-cell;
+				width: 1%;
+				a {}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+// IE 를 위해 추가수정
+// 로그인페이지 작업후 추가 스타일 수정
+.login-wrap {
+	.mbskin2 {
+		.agree-wrap,
+		.login-auto-wrap {
+			input {
+				margin-top: 0;
+			}
+		}
+		.login-title.icon {
+			background-position: left top;
+		}
+		
+	}
+	
+}
+
+.login-wrap .login-id-wrap input, .login-wrap .login-pw-wrap input {
+	height: 30px;
+}
+.login-wrap .login-id-wrap label, .login-wrap .login-pw-wrap label,
+.login-auto-wrap label {
+	margin-bottom: 0;
+}
+
+// ie 에서 적용이 안될 글꼴 적용
+.btn02,
+.btn01,
+.btn_confirm a,
+.btn_submit,
+.sns-text,
+.login-info,
+.title-style-sub,
+#fregister_term h2,
+#fregister_private h2 {
+	font-family: $font-family-base;
+}
+
+
+
+
+
+
+// 회원정보찾기
+.new_win {
+	#win_title {
+		@extend %title;
+		font-size: 30px;
+		margin-bottom: 0;
+	}
+	fieldset {
+		border: 0 none;
+	}
+}
+
+#find_info {
+	max-width: 500px;
+	margin: 0 auto;
+	#info_fs {
+		text-align: center;
+		label {
+			margin-right: 10px;
+		}
+		.frm_input {
+			width: 200px;
+		}
+	}
+	p {
+		font-size: 14px;
+		color: #666;
+		text-align: left;
+		font-weight: 400;
+	}
+
+	#captcha {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		position: relative;
+		width: 350px;
+
+		#captcha_key {
+			width: 150px;
+			height: 44px;
+			background: #fff;
+		}
+
+		#captcha_mp3 {
+			top: 5px;
+			left: 137px;
+		}
+		#captcha_reload {
+			top: 26px;
+			left: 137px;
+		}
+	}
+
+	.win_btn {
+		text-align: center;
+		margin-top: 25px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #b6b6b6;
+		margin-bottom: 20px;
+
+		button {
+			@extend %btnStyle;
+			&:hover {
+				background-color: #333;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,235 @@
+/*
+---------------------------------------------------------------
+*
+* register_form 회원가입
+* 
+*
+---------------------------------------------------------------
+*/
+
+
+
+.title {
+	@extend %title;
+}
+
+
+#fregisterform {
+	padding: 60px 50px;
+	.btn_confirm {
+		// margin-top: 60px;
+		.btn_submit {
+			@extend %submit;
+			width: 180px;
+		}
+	}
+	.btn_cancel {
+		@extend %cancel;
+		display: inline-block;
+	}
+}
+
+.tbl_frm01 {
+	width: 100%;
+	margin-bottom: 50px;
+
+	.fa {
+		margin-right: 5px;
+	}
+	th {
+		width: 150px;
+		text-align: left;
+		background-color: transparent;
+		border-right: 0 none;
+	}
+	td {
+		padding: 10px;
+	}
+	label {
+		color: $text-color;
+	}
+	.frm_info {
+		display: block;
+		font-size: 13px;
+		color: #888;
+		margin-bottom: 5px;
+	}
+
+	.required, 
+	.frm_input,
+	input {
+		&[type="text"],
+		&[type="password"] {
+			height: auto;
+			background-color: transparent !important;
+		}
+	}
+	#reg_mb_id,
+	#reg_mb_name,
+	#reg_mb_nick,
+	#reg_mb_email,
+	#reg_mb_password_re,
+	#reg_mb_password {
+		width: 230px;
+	}
+	.btn-confirm {
+		background-color: #333;
+		color: #fff;
+		padding: 5px 20px;
+		text-decoration: none;
+		display: inline-block;
+		text-align: center;
+		font-size: 13px;
+		min-width: 130px;
+		margin-left: 5px;
+	}
+
+	.fa-star {
+		font-size: 10px;
+		color: $active-bg;
+		vertical-align: middle;
+	}
+	.frm_info2 {
+		font-size: 13px;
+		color: #777;
+		margin-left: 5px;
+	}
+	.frm-input {
+		@extend %btnBlack;
+		margin-left: 5px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		// background-color: #000;
+		// color: #fff;
+	}
+	.frm-select {
+		border: 1px solid $border-color;
+		height: auto;
+		padding: 3px 0;
+		margin-right: 5px;
+	}
+	.frm_input2 {
+		width: 100px;
+		margin: 0 5px;
+	}
+	.btn_frmline {
+		padding: 5px 15px;
+		height: auto;
+		min-width: 90px;
+		margin-left: 5px;
+		font-size: 13px;
+	}
+	.frm_address {
+		margin-top: 10px;
+	}
+	#captcha #captcha_key {
+		width: 100px;
+	}
+	#captcha_info {
+		font-size: 13px;
+	}
+}
+
+.title3 {
+	@extend %title3;
+}
+
+
+#captcha {
+	display: inline-block;
+    position: relative;
+	border: 0 none;
+
+	legend {
+	    position: absolute;
+	    margin: 0;
+	    padding: 0;
+	    font-size: 0;
+	    line-height: 0;
+	    text-indent: -9999em;
+	    overflow: hidden;
+	    display: none;
+	}
+	#captcha_img {
+		width: 100px;
+	    height: 41px;
+	    border: 1px solid #e9e9e9;
+	}
+	#captcha_mp3 {
+	    position: absolute;
+	    top: 0;
+	    left: 101px;
+	    margin: 0;
+	    padding: 0;
+	    width: 23px;
+	    height: 22px;
+	    border: 0;
+	    background: transparent;
+	    vertical-align: middle;
+	    overflow: hidden;
+	    cursor: pointer;
+	    span {
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 23px;
+	        height: 22px;
+	        background: url('../../../plugin/kcaptcha/img/sound.gif');
+	    }
+	}
+
+	#captcha_reload {
+	    position: absolute;
+	    top: 21px;
+	    left: 101px;
+	    margin: 0;
+	    padding: 0;
+	    width: 23px;
+	    height: 22px;
+	    border: 0;
+	    background: transparent;
+	    vertical-align: middle;
+	    overflow: hidden;
+	    cursor: pointer;
+	    span {
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 23px;
+	        height: 22px;
+	        background: url('../../../plugin/kcaptcha/img/reload.gif');
+	    }
+	}
+	#captcha_key {
+	    // margin: 0 0 0 25px;
+	    margin: -37px 0 0 18px;
+	    padding: 0 5px;
+	    width: 70px;
+	    height: 41px;
+	    border: 1px solid #b8c9c2;
+	    background: #f7f7f7;
+	    font-size: 1.333em;
+	    font-weight: bold;
+	    text-align: center;
+	    line-height: 2.8em;
+	}
+
+	#captcha_info {
+	    display: block;
+	    margin: 5px 0 0;
+	    font-size: 0.95em;
+	    letter-spacing: -0.1em;
+	}
+
+
+}
+
+#reg_mb_zip {
+	width: 70px;
+	margin-right: 5px;
+}
+#reg_mb_zip2 {
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 70px;
+}

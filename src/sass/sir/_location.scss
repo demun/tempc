@@ -1,0 +1,45 @@
+/*
+---------------------------------------------------------------
+*
+* location, 현재위치
+*
+---------------------------------------------------------------
+*/
+
+
+.main-wrap {
+	// atype 인경우 네비게이션이 나와있어 여백확보
+	&.atype {
+		margin-top: 100px;
+	}
+
+	#sct_location {
+		background: none;
+		border: 0 none;
+
+		a {
+			font-size: 12px;
+			color: #777;
+			position: relative;
+		}
+		.sct_bg {
+			background: none;
+
+			@extend %fontawesome;
+
+			&:after {
+				content: '\f105';
+				position: absolute;
+				right: 0;
+				top: 10px;
+			}
+		}
+		.sct_here {}
+	}
+
+
+}
+
+
+
+

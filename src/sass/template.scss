@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+// // style
+@import "common/variables";
+@import "common/mixins";
+@import "common/extend";
+// @import "common/nanumGothic";		// 나눔고딕
+// @import "common/nanumBarunGothic";	// 나눔바른고딕
+@import "common/natoSans";			// 본고딕
+@import "common/base";
+@import "common/helper";
+@import "common/typography";
+// @import "common/test";
+
+
+// 그누보드, 영카트 스타일
+// @import "sir/default_shop"; 	// basic/theme/basic/css/default_shop.css
+// @import "sir/style";			// basic/skin/shop/basic/style.css
+// @import "sir/outlogin";			// basic/theme/basic/skin/outlogin/shop_basic/style.css
+@import "sir/login";			// 로그인 스타일
+@import "sir/register";			// 회원가입약관
+@import "sir/register_form";	// 회원가입
+@import "sir/cart";				// 장바구니
+@import "sir/wishlist";			// 위시리스트
+@import "sir/mypage";			// 마이페이지
+@import "sir/orderinquiry";		// 주문내역조회
+@import "sir/orderinquiryview";	// 주문상세내역
+@import "sir/faq";				// faq
+@import "sir/qna";				// qna
+@import "sir/notice";			// 공지사항
+@import "sir/gallery";			// 갤러리게시판
+@import "sir/webzine";			// 웹진게시판
+@import "sir/sub";				// 상품구매
+@import "sir/orderform";		// 주문서작성
+@import "sir/location";			// 현재위치
+
+

@@ -1,0 +1,62 @@
+<div class="login-wrap">
+    <!-- 로그인 시작 { -->
+    <div class="mbskin">
+        <h1 class="login-title icon bdb-orange">
+                사용자로그인
+                <span class="login-info">가입하신 아이디와 비밀번호로 로그인하여 주십시요.</span>
+            </h1>
+        <form name="flogin">
+            <fieldset class="login_fs">
+                <div class="login-id-wrap">
+                    <legend>회원로그인</legend>
+                    <label for="login_id" class="login_id">회원아이디<strong class="sound_only"> 필수</strong></label>
+                    <input type="text" name="mb_id" id="login_id" required="required" class="frm_input required">
+                </div>
+                <div class="login-pw-wrap">
+                    <label for="login_pw" class="login_pw">비밀번호<strong class="sound_only"> 필수</strong></label>
+                    <input type="password" name="mb_password" id="login_pw" required="required" class="frm_input required">
+                </div>
+                <input type="submit" value="로그인" class="btn_submit">
+                <div class="login-auto-wrap">
+                    <input type="checkbox" name="auto_login" id="login_auto_login">
+                    <label for="login_auto_login">자동로그인</label>
+                </div>
+            </fieldset>
+            <aside id="login_info">
+                <h2>회원로그인 안내</h2>
+                <p>
+                    회원아이디 및 비밀번호가 기억 안나실 때는 아이디/비밀번호 찾기를 이용하십시오.
+                    <br> 아직 회원이 아니시라면 회원으로 가입 후 이용해 주십시오.
+                </p>
+                <div>
+                    <a href="./" target="_blank" id="login_password_lost" class="btn02"><i class="fa fa-search"></i>아이디 비밀번호 찾기</a>
+                    <a href="./" class="btn01"><i class="fa fa-pencil"></i>회원 가입</a>
+                </div>
+            </aside>
+        </form>
+        <!-- 주문하기, 신청하기 -->
+        <h2 class="login-title">비회원 주문조회 안내</h2>
+        <fieldset id="mb_login_od">
+            <legend>비회원 주문조회</legend>
+            <form name="forderinquiry" method="post" action="http://61.37.147.220/basic/shop/orderinquiry.php" autocomplete="off">
+                <div class="login-id-wrap">
+                    <label for="od_id" class="od_id">주문서번호<strong class="sound_only"> 필수</strong></label>
+                    <input type="text" name="od_id" value="" id="od_id" required="required" class="frm_input required" size="20">
+                </div>
+                <div class="login-pw-wrap">
+                    <label for="id_pwd" class="od_pwd">비밀번호<strong class="sound_only"> 필수</strong></label>
+                    <input type="password" name="od_pwd" size="20" id="od_pwd" required="required" class="frm_input required">
+                </div>
+                <input type="submit" value="확인" class="btn_submit">
+            </form>
+        </fieldset>
+        <section id="mb_login_odinfo">
+            <h2>비회원 주문조회 안내</h2>
+            <p>메일로 발송해드린 주문서의 <strong>주문번호</strong> 및 주문 시 입력하신 <strong>비밀번호</strong>를 정확히 입력해주십시오.</p>
+        </section>
+        <div class="btn_confirm">
+            <a href="http://61.37.147.220/basic/">메인으로 돌아가기</a>
+        </div>
+    </div>
+</div>
+<!-- //.login-wrap -->

@@ -1,0 +1,86 @@
+/*
+---------------------------------------------------------------
+*
+* quick
+*
+---------------------------------------------------------------
+*/
+
+
+
+// quick-open
+.quick-open {
+	position: relative;
+	top: 215px;
+	right: 22px;
+	display: inline-block;
+}
+
+
+// quick
+.quick {
+	@include ulstyle();
+	margin: 40px 15px 20px;
+
+	.q-text-1 {
+		font-size: 16px;
+		color: $link-color;
+	}
+	.q-text-2 {
+		font-size: 18px;
+		color: $link-color;
+	}
+	.q-text-3,
+	.q-text-4,
+	.q-text-5 {
+		color: #666;
+		line-height: 1.6;
+	}
+	
+}
+
+.quick-01 {
+	padding-bottom: 50px;
+	border-bottom: 1px solid $border-color;
+
+	.q-text-2 {
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+	.q-text-5 {
+		margin-top: 20px;
+	}
+}
+.quick-02 {
+	margin-top: 50px;
+	margin-bottom: 15px;
+
+	.q-text-1 {
+		margin-bottom: 30px;
+	}
+	.q-text-2 {
+		font-size: 14px;
+		color: #666;
+	}
+}
+.quick-03 {
+	margin: 70px auto 50px;
+	text-align: center;
+
+	a {
+		font-size: 35px;
+		margin-right: 10px;
+	}
+}
+.quick-04 {
+	.bx-wrap {
+		width: 100px;
+		margin: 0 auto;
+	}
+	.bx-title {
+		text-align: center;
+		margin-bottom: 5px;
+	}
+}
+
+

@@ -1,0 +1,252 @@
+/*
+---------------------------------------------------------------
+*
+* orderinquiryview 주문상세내역
+*
+---------------------------------------------------------------
+*/
+
+.tbl_head02 {
+	margin-bottom: 10px;
+}
+// .main-wrap {
+
+#sod_fin {
+	margin-top: 40px;
+	margin-bottom: 120px;
+
+	#sod_fin_cancel {
+		text-align: center;
+		h2 {
+			display: none;
+		}
+		button {
+			@extend %btnBlack;
+			min-width: 180px;
+		}
+	}
+
+	#sod_bsk_tot {
+		@include clearfix();
+		background: none;
+		border: 0 none;
+		margin: 0 0 20px;
+		margin-top: 3px;
+		padding: 20px 0 40px;
+		border-top: 1px solid $border-color;
+
+		dt {
+			width: ($sub-width - 200); //920
+			float: left;
+			padding-left: ($sub-width - 400); //720px
+			text-align: left;
+		}
+		dd {
+			width: ($sub-width - 920);
+			float: left;
+			text-align: left;
+			margin-left: 0;
+		}
+		.sod_bsk_cnt {
+			margin-top: 5px;
+			margin-bottom: 10px;
+			background: #666;
+			height: 30px;
+			&.odd {
+				color: #fff;
+				padding-top: 4px;
+			}
+			&.even {
+				color: #fff;
+				font-size: 18px;
+			}
+		}
+		.odd {
+			color: #666;
+			font-weight: 400;
+		}
+		.even {
+			color: $text-color;
+		}
+	}
+}
+
+#sod_fin_no {
+	@extend %h2;
+
+	i {
+		margin-right: 5px;
+	}
+
+	strong {
+		// @extend %titleSub;
+	}
+}
+
+#sod_fin_list {
+	border-bottom: 1px solid #000;
+	margin-top: 30px;
+	h2 {
+		display: none;
+	}
+	.td_imgsmall {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.th_itopt,
+	.th_itqty,
+	.th_itprice,
+	.th_itpt,
+	.td_dvr,
+	.td_mngsmall {
+		font-size: 13px;
+		color: #666;
+	}
+
+
+}
+
+
+.btn_frmline {
+	@extend %btnBlack;
+}
+
+#sod_sts_wrap {
+	border-bottom: 1px solid $border-color;
+	margin-bottom: 5px;
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+#sod_sts_explan {
+    display: none;
+}
+#sod_fin_legend {
+	background: #f7f7f7;
+	@include clearfix();
+	padding: 20px 0;
+	text-align: left;
+
+	dt {
+		clear: both;
+	    float: left;
+	    margin: 0 0 5px 60px;
+	    width: 90px;
+	    color: $link-color;
+	    font-size: 14px;
+	}
+	dd {
+		float: left;
+		font-size: 13px;
+		color: #666;
+		margin-left: 0;
+	}
+}
+
+
+// 결재 배송 정보
+#sod_fin_view {
+	@include clearfix();
+	margin-top: 50px;
+	border: 0 none;
+	border-bottom: 1px solid $border-color;
+
+	h3 {
+		font-size: 16px;
+		i {
+			margin-right: 5px;
+		}
+	}
+	.tbl_head01 {
+		tbody {
+			tr {
+				&:first-child {
+					th,
+					td {
+						border-top-color: #b5b5b5;
+					}
+				}
+				th {
+					font-weight: 500;
+					position: relative;
+					text-align: left;
+					padding-left: 30px;
+					&:before {
+						content: ".";
+						position: absolute;
+						left: 20px;
+						top: 7px;
+						color: $active-bg;
+					}
+				}
+				td {
+					font-size: 13px;
+					color: #666;
+				}
+			}
+		}
+	}
+}
+#sod_fin_pay {
+	width: 525px;
+	float: left;
+}
+#sod_fin_orderer {
+	width: 525px;
+	float: right;
+}
+#sod_fin_receiver {
+	clear: both;
+	width: 525px;
+	float: left;
+	margin-top: 60px;
+}
+#sod_fin_dvr {
+	width: 525px;
+	float: right;
+	margin-top: 60px;
+}
+
+
+
+#sod_fin_tot {
+	background: #fff;
+	color: #333;
+	border: 0 none;
+	margin-top: 3px;
+	margin-bottom: 60px;
+	padding: 20px 0;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+
+	h2 {
+		display: none;
+	}
+
+	ul {
+		@include ulstyle();
+	}
+
+	li {
+		padding-left: 710px;
+		color: #666;
+		border-bottom: 0 none;
+		padding: 5px;
+
+		strong {
+			color: $text-color;
+		    float: none;
+		    position: absolute;
+		    left: 900px;
+		}
+	}
+
+}
+
+
+// 주문취소
+#sod_fin_cancelfrm {
+	display: none;
+}
+

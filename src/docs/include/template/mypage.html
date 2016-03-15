@@ -1,0 +1,161 @@
+<div class="wrapper">
+    <div id="container">
+        <div class="title">최고관리자님 마이페이지</div>
+        <!-- 마이페이지 시작 { -->
+        <div id="smb_my">
+            <!-- 회원정보 개요 시작 { -->
+            <section id="smb_my_ov">
+                <h2><i class="fa fa-user"></i>회원정보 개요</h2>
+                <div id="smb_my_act">
+                    <ul>
+                        <li><a href="http://61.37.147.220/basic/adm/" class="btn_admin">관리자</a></li>
+                        <li><a href="http://61.37.147.220/basic/bbs/memo.php" target="_blank" class="win_memo btn01">쪽지함</a></li>
+                        <li><a href="http://61.37.147.220/basic/bbs/member_confirm.php?url=register_form.php" class="btn01">회원정보수정</a></li>
+                        <li><a href="http://61.37.147.220/basic/bbs/member_confirm.php?url=member_leave.php" onclick="return member_leave();" class="btn02">회원탈퇴</a></li>
+                    </ul>
+                </div>
+                <div class="tbl-1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>보유포인트</th>
+                                <th>보유쿠폰</th>
+                                <th>연락처</th>
+                                <th>E-mail</th>
+                                <th>주소</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="tbl-text-1">000</div>
+                                </td>
+                                <td>0</td>
+                                <td>000-000-0000</td>
+                                <td>admin@email.com</td>
+                                <td>
+                                    <p>(135754) 서울특별시 강남구 강남대로 310, 1312호</p>
+                                    <p>(역삼동,유니온센터오피스텔</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 아래 dl 이 위의 table 로 변경 -->
+                <!-- <dl>
+			                <dt>보유포인트</dt>
+			                <dd><a href="http://61.37.147.220/basic/bbs/point.php" target="_blank" class="win_point">817점</a></dd>
+			                <dt>보유쿠폰</dt>
+			                <dd><a href="http://61.37.147.220/basic/shop/coupon.php" target="_blank" class="win_coupon">0</a></dd>
+			                <dt>연락처</dt>
+			                <dd>미등록</dd>
+			                <dt>E-Mail</dt>
+			                <dd>admin@domain.com</dd>
+			                <dt>최종접속일시</dt>
+			                <dd>2016-03-03 09:40:41</dd>
+			                <dt>회원가입일시</dt>
+			                <dd>2015-06-18 11:52:19</dd>
+			                <dt id="smb_my_ovaddt">주소</dt>
+			                <dd id="smb_my_ovaddd">() </dd>
+			            </dl> -->
+            </section>
+            <!-- } 회원정보 개요 끝 -->
+            <!-- 최근 주문내역 시작 { -->
+            <section id="smb_my_od">
+                <h2><i class="fa fa-truck"></i>최근 주문내역</h2>
+                <!-- 주문 내역 목록 시작 { -->
+                <div class="tbl_head01 tbl_wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">주문서번호</th>
+                                <th scope="col">주문일시</th>
+                                <th scope="col">상품수</th>
+                                <th scope="col">주문금액</th>
+                                <th scope="col">입금액</th>
+                                <th scope="col">미입금액</th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="hidden" name="ct_id[0]" value="">
+                                    <a href="http://61.37.147.220/basic/shop/orderinquiryview.php?od_id=2016021908293423&amp;uid=baa2b2ef01d19787431b5dce3e31ab43">2016021908293423</a>
+                                </td>
+                                <td>16-02-19 08:30 (금)</td>
+                                <td class="td_num">1</td>
+                                <td class="td_numbig">347,000원</td>
+                                <td class="td_numbig">0원</td>
+                                <td class="td_numbig">347,000원</td>
+                                <td>입금확인중</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- } 주문 내역 목록 끝 -->
+                <div class="smb_my_more">
+                    <a href="./orderinquiry.php" class="btn01"><i class="fa fa-plus"></i>주문내역 더보기</a>
+                </div>
+            </section>
+            <!-- } 최근 주문내역 끝 -->
+            <!-- 최근 위시리스트 시작 { -->
+            <section id="smb_my_wish">
+                <h2><i class="fa fa-gift"></i>최근 위시리스트</h2>
+                <div class="tbl_head01 tbl_wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">이미지</th>
+                                <th scope="col">상품명</th>
+                                <th scope="col">보관일시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smb_my_img">
+                                    <a href="http://61.37.147.220/basic/shop/item.php?it_id=1387871937"><img src="http://61.37.147.220/basic/shop/img/no_image.gif" width="70" height="70" alt=""></a>
+                                </td>
+                                <td><a href="./item.php?it_id=1387871937">TH-블락체크 셔츠-블루2</a></td>
+                                <td class="td_datetime">2016-02-19 08:34:40</td>
+                            </tr>
+                            <tr>
+                                <td class="smb_my_img">
+                                    <a href="http://61.37.147.220/basic/shop/item.php?it_id=1387870218"><img src="http://61.37.147.220/basic/shop/img/no_image.gif" width="70" height="70" alt=""></a>
+                                </td>
+                                <td><a href="./item.php?it_id=1387870218">TH-베이직 슬림셔츠 블랙</a></td>
+                                <td class="td_datetime">2016-02-19 08:34:29</td>
+                            </tr>
+                            <tr>
+                                <td class="smb_my_img">
+                                    <a href="http://61.37.147.220/basic/shop/item.php?it_id=1387871946"><img src="http://61.37.147.220/basic/shop/img/no_image.gif" width="70" height="70" alt=""></a>
+                                </td>
+                                <td><a href="./item.php?it_id=1387871946">TH-블락체크 셔츠-레드2</a></td>
+                                <td class="td_datetime">2016-02-19 08:34:22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="smb_my_more">
+                    <a href="./wishlist.php" class="btn01"><i class="fa fa-plus"></i>위시리스트 더보기</a>
+                </div>
+            </section>
+            <!-- } 최근 위시리스트 끝 -->
+        </div>
+        <script>
+        $(function() {
+            $(".win_coupon").click(function() {
+                var new_win = window.open($(this).attr("href"), "win_coupon", "left=100,top=100,width=700, height=600, scrollbars=1");
+                new_win.focus();
+                return false;
+            });
+        });
+
+        function member_leave() {
+            return confirm('정말 회원에서 탈퇴 하시겠습니까?')
+        }
+        </script>
+        <!-- } 마이페이지 끝 -->
+    </div>
+</div>
+<!-- //.main-wrap .wrapper -->

@@ -1,0 +1,105 @@
+/*
+---------------------------------------------------------------
+*
+* list
+*
+---------------------------------------------------------------
+*/
+
+// 균등한 너비
+.list-3 {
+	@include ulstyle();
+	display: table;
+
+	li {
+		display: table-cell;
+		width: 1%;
+	}
+}
+
+
+
+// sub-01/page-01
+.list-2 {
+	@include ulstyle();
+	@include clearfix();
+
+	li {
+		// display: table-cell;
+		// width: 1%;
+
+		float: left;
+		width: 20%;
+
+		&:first-child a {
+			margin-left: 0;
+		}
+
+		&.on {
+		    .hover {
+		        opacity: 1;
+		    }
+		}
+
+		a {
+			display: block;
+			text-align: center;
+			position: relative;
+			margin-left: 5px;
+
+			img {
+				// width: 100%;
+				// height: 100%;
+			}
+
+			.hover {
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all .7s ease 0s;
+				text-align: center;
+				
+				.text {
+					font-size: 26px;
+					color: #fff;
+					// position: absolute;
+					// top: 40%;
+					// left: 20%;
+					// color: #fff;
+					// font-size: 3rem;
+				}
+				.inner {
+					display: inline-block;
+					margin: 15% auto;
+				}
+			}
+			&:hover {
+				.hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		.title-1 {
+			font-size: 18px;
+			color: #3a3a3a;
+			margin: 10px 0 0 5px;
+		}
+		.text-1 {
+			color: #878787;
+			font-size: 15px;
+			margin: 5px 10px 0 5px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+	}
+}
+
+
+
+

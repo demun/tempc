@@ -1,0 +1,176 @@
+<div class="wrapper">
+    <div id="container">
+        <section id="bo_w">
+            <h2 id="container_title">자유게시판3 글수정</h2>
+            <!-- 게시물 작성/수정 시작 { -->
+            <form name="fwrite" id="fwrite" action="http://61.37.147.220/basic/bbs/write_update.php" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                <input type="hidden" name="uid" value="2016030714301549">
+                <input type="hidden" name="w" value="u">
+                <input type="hidden" name="bo_table" value="free3">
+                <input type="hidden" name="wr_id" value="23">
+                <input type="hidden" name="sca" value="">
+                <input type="hidden" name="sfl" value="">
+                <input type="hidden" name="stx" value="">
+                <input type="hidden" name="spt" value="">
+                <input type="hidden" name="sst" value="">
+                <input type="hidden" name="sod" value="">
+                <input type="hidden" name="page" value="0">
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th scope="row">옵션</th>
+                                <td>
+                                    <input type="checkbox" id="notice" name="notice" value="1">
+                                    <label for="notice">공지</label>
+                                    <input type="checkbox" id="html" name="html" onclick="html_auto_br(this);" value="">
+                                    <label for="html">html</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wr_subject">제목<strong class="sound_only">필수</strong></label>
+                                </th>
+                                <td>
+                                    <div id="autosave_wrapper">
+                                        <input type="text" name="wr_subject" value="갤러리 테스트" id="wr_subject" required="" class="frm_input required" size="50" maxlength="255">
+                                        <script src="http://61.37.147.220/basic/js/autosave.js"></script>
+                                        <button type="button" id="btn_autosave" class="btn_frmline">임시 저장된 글 (<span id="autosave_count">1</span>)</button>
+                                        <div id="autosave_pop">
+                                            <strong>임시 저장된 글 목록</strong>
+                                            <div>
+                                                <button type="button" class="autosave_close"><img src="http://61.37.147.220/basic/skin/board/gallery2/img/btn_close.gif" alt="닫기"></button>
+                                            </div>
+                                            <ul></ul>
+                                            <div>
+                                                <button type="button" class="autosave_close"><img src="http://61.37.147.220/basic/skin/board/gallery2/img/btn_close.gif" alt="닫기"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wr_content">내용<strong class="sound_only">필수</strong></label>
+                                </th>
+                                <td class="wr_content">
+                                    <span class="sound_only">웹에디터 시작</span>
+                                    <textarea id="wr_content" name="wr_content" class="" maxlength="65536" style="width:100%">내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용
+                                    </textarea>
+                                    <span class="sound_only">웹 에디터 끝</span> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wr_link1">링크 #1</label>
+                                </th>
+                                <td>
+                                    <input type="text" name="wr_link1" value="" id="wr_link1" class="frm_input" size="50">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wr_link2">링크 #2</label>
+                                </th>
+                                <td>
+                                    <input type="text" name="wr_link2" value="" id="wr_link2" class="frm_input" size="50">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일 #1</th>
+                                <td>
+                                    <input type="file" name="bf_file[]" title="파일첨부 1 :  용량 1,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input">
+                                    <input type="checkbox" id="bf_file_del0" name="bf_file_del[0]" value="1">
+                                    <label for="bf_file_del0">img-12.gif(37.4K) 파일 삭제</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일 #2</th>
+                                <td>
+                                    <input type="file" name="bf_file[]" title="파일첨부 2 :  용량 1,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn_confirm">
+                    <input type="submit" value="작성완료" id="btn_submit" accesskey="s" class="btn_submit">
+                    <a href="./board.php?bo_table=free3" class="btn_cancel">취소</a>
+                </div>
+            </form>
+            <script>
+            function html_auto_br(obj) {
+                if (obj.checked) {
+                    result = confirm("자동 줄바꿈을 하시겠습니까?\n\n자동 줄바꿈은 게시물 내용중 줄바뀐 곳을<br>태그로 변환하는 기능입니다.");
+                    if (result)
+                        obj.value = "html2";
+                    else
+                        obj.value = "html1";
+                } else
+                    obj.value = "";
+            }
+
+            function fwrite_submit(f) {
+                var wr_content_editor = document.getElementById('wr_content');
+                if (!wr_content_editor.value) {
+                    alert("내용을 입력해 주십시오.");
+                    wr_content_editor.focus();
+                    return false;
+                }
+
+                var subject = "";
+                var content = "";
+                $.ajax({
+                    url: g5_bbs_url + "/ajax.filter.php",
+                    type: "POST",
+                    data: {
+                        "subject": f.wr_subject.value,
+                        "content": f.wr_content.value
+                    },
+                    dataType: "json",
+                    async: false,
+                    cache: false,
+                    success: function(data, textStatus) {
+                        subject = data.subject;
+                        content = data.content;
+                    }
+                });
+
+                if (subject) {
+                    alert("제목에 금지단어('" + subject + "')가 포함되어있습니다");
+                    f.wr_subject.focus();
+                    return false;
+                }
+
+                if (content) {
+                    alert("내용에 금지단어('" + content + "')가 포함되어있습니다");
+                    if (typeof(ed_wr_content) != "undefined")
+                        ed_wr_content.returnFalse();
+                    else
+                        f.wr_content.focus();
+                    return false;
+                }
+
+                if (document.getElementById("char_count")) {
+                    if (char_min > 0 || char_max > 0) {
+                        var cnt = parseInt(check_byte("wr_content", "char_count"));
+                        if (char_min > 0 && char_min > cnt) {
+                            alert("내용은 " + char_min + "글자 이상 쓰셔야 합니다.");
+                            return false;
+                        } else if (char_max > 0 && char_max < cnt) {
+                            alert("내용은 " + char_max + "글자 이하로 쓰셔야 합니다.");
+                            return false;
+                        }
+                    }
+                }
+
+
+                document.getElementById("btn_submit").disabled = "disabled";
+
+                return true;
+            }
+            </script>
+        </section>
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //.main-wrap .wrapper -->

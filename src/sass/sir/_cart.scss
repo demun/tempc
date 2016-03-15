@@ -1,0 +1,149 @@
+/*
+---------------------------------------------------------------
+*
+* cart 장바구니
+*
+---------------------------------------------------------------
+*/
+
+// .main-wrap {
+	
+
+#sod_bsk_list {
+	margin-top: 40px;
+	margin-bottom: 100px;
+	.tbl_head01 {
+		margin-bottom: 3px;
+		thead {
+			th {
+				@extend %thStyle;
+			}
+		}
+		tbody {
+			td {
+				padding: 15px 5px;
+				a {
+					color: $text-color;
+					b {
+						font-weight: 400;
+					}
+				}
+			}
+		}
+		.td_dvr {
+			@extend .nowrap;
+		}
+		.sod_img {
+			width: 160px;
+		}
+
+		.sod_opt {
+			background: transparent;
+			border: 0 none;
+			margin: 5px 0;
+			ul {
+				@include ulstyle();
+			}
+			li {
+				border-bottom: 0 none;
+				color: #666;
+				font-size: 13px;
+			}
+		}
+
+		.sod_option_btn {
+			width: 140px;
+			.mod_options {
+				font-family: $font-family-base;
+				border: 0 none;
+				background-color: #333;
+				color: #fff;
+				padding: 2px 0;
+				width: 100%;
+				font-size: 12px;
+			}
+		}
+		.td_num,
+		.td_numbig,
+		.td_dvr,
+		.td_chk {
+			color: #666;
+			font-size: 13px;
+		}
+	}
+
+	#sod_bsk_tot {
+		@include clearfix();
+		background: none;
+		border: 0 none;
+		margin: -27px 0 40px;
+		padding: 20px 0 40px;
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $link-color;
+		dt {
+			width: ($sub-width - 200); //920
+			float: left;
+			padding-left: ($sub-width - 400); //720px
+			text-align: left;
+			margin: 0 0 5px;
+			&.sod_bsk_cnt {
+				color: #fff;
+				padding-top: 4px;
+			}
+		}
+		dd {
+			width: ($sub-width - 920);
+			float: left;
+			text-align: left;
+			margin: 0 0 5px;
+			&.sod_bsk_cnt {
+				color: #fff;
+				font-size: 18px;
+			}
+		}
+		.sod_bsk_cnt {
+			margin-top: 5px;
+			margin-bottom: 10px;
+			background: #666;
+			height: 30px;
+			&.odd {
+				color: #fff;
+				padding-top: 4px;
+			}
+			&.even {
+				color: #fff;
+				font-size: 18px;
+			}
+		}
+	}
+	// .sod_bsk_cnt {
+	// 	background: transparent;
+	// 	color: #666;
+	// 	font-weight: 400;
+	// }
+	
+
+	#sod_bsk_act {
+		text-align: center;
+		.btn01,
+		.btn_submit {
+			@extend %btnStyle;
+		}
+		.btn_submit {
+			@extend %btnSubmit;
+		}
+	}
+
+	
+} //#sod_bsk_list
+
+
+
+#sod_bsk {
+	#sod_bsk_list .tbl_head01 {
+		margin-bottom: 30px;
+	}
+}
+
+
+

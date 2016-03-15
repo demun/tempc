@@ -1,0 +1,132 @@
+/*
+---------------------------------------------------------------
+*
+* register 회원가입약관
+* main-wrap 에 싸서 기존 스타일을 덮어쓴다.
+*
+---------------------------------------------------------------
+*/
+
+label,
+select {
+	font-family: $font-family-base;
+	font-weight: 400;
+	color: #666;
+	font-size: 13px;
+}
+
+textarea {
+	font-family: $font-family-base;
+	font-weight: 400;
+	color: #666;
+}
+
+#agree11 {
+	margin: 0;
+	vertical-align: middle;
+}
+
+// .main-wrap {
+
+#container {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+
+	margin: 0 auto;
+	width: $sub-width;
+	
+	float: none;
+	padding-top: 50px;
+	background: transparent;
+}
+
+#wrapper_title {
+	display: none;
+}
+
+.title-style {
+	display: block;
+	color: $text-color;
+	font-weight: 400;
+	padding-bottom: 10px;
+	border-bottom: 2px solid $active-bg;
+	font-size: 25px;
+}
+.title-style-sub {
+	font-size: 15px;
+	color: #666;
+}
+
+// 회원가입약관
+#fregister_term {
+	margin-bottom: 30px;
+	border-bottom: 1px solid $border-color;
+	padding-bottom: 30px;
+	h2 {
+		display: block;
+		color: $text-color;
+		font-weight: 400;
+		padding-bottom: 10px;
+		border-bottom: 2px solid $active-bg;
+		font-size: 25px;
+	}
+	textarea {
+		margin: 50px 30px 10px;
+		padding: 15px 30px;
+		height: 200px;
+		width: 95%;
+	}
+}
+
+.fregister_agree {
+	text-align: right;
+	margin-right: 30px;
+	border: 0 none;
+
+	label {
+		font-weight: 400;
+		font-size: #666;
+		font-size: 13px;
+	}
+	input {}
+}
+
+
+
+
+// 개인정보처리방침안내
+#fregister_private {
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #000;
+
+	h2 {
+		display: block;
+		color: $text-color;
+		font-weight: 400;
+		padding-bottom: 10px;
+		border-bottom: 1px solid $border-color;
+		font-size: 25px;
+	}
+	textarea {
+		margin: 50px 30px 10px;
+		padding: 15px 30px;
+		height: 200px;
+		width: 95%;
+	}
+}
+
+#fregister {
+	.btn_confirm {
+		margin-bottom: 60px;
+	}
+	.btn_submit {
+		@extend %submit
+	}
+}
+
+
+
+// }
+

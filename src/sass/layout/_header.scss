@@ -1,0 +1,168 @@
+/*
+---------------------------------------------------------------
+*
+* header
+*
+---------------------------------------------------------------
+*/
+
+
+.header {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    @include clearfix();
+
+    &.cbp-af-header-shrink {
+        border-color: #ff7315;
+        background-color: rgba(255,255,255,.6);
+    }
+}
+
+
+
+
+/* top-nav
+* ------------------------------------------------------------ */
+.top-nav {
+    width: 100%;
+    background-color: #d7d7d7;
+    padding: 7px 0;
+
+    .topnav-link {
+        float: right;
+        list-style: none;
+        @include ulstyle();
+
+        li {
+            float: left;
+            position: relative;
+            
+            // 불릿이 있는경우
+            &:first-child a:after {
+                display: none;
+            }
+            a {
+                display: block;
+                float: left;
+                color: $link-color;
+                padding: 0 10px;
+                font-size: 12px;
+                font-weight: 400;
+
+                // 불릿이 있는경우
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 12px;
+                    background-color: $link-color;
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* logo-area
+* ------------------------------------------------------------ */
+.logo-area {
+    @include clearfix();
+
+    .logo-wrap {
+        width: 150px;
+        float: left;
+    }
+    .logo {
+        margin: 15px auto;
+        display: block;
+        text-align: center;
+    }
+
+    .input-wrap {
+        width: ($wrapper-width - 150px);
+        float: left;
+    }
+    .input-inner {
+        margin: 40px auto;
+        text-align: center;
+
+        display: table;
+    }
+    .search-input {
+        width: 360px;
+        padding: 5px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid $main-bg;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        // display: inline-block;
+        // height: 30px;
+
+        display: table-cell;
+    }
+    .search-icon {
+        background-color: $main-bg;
+        color: #fff;
+        width: 30px;
+        // display: inline-block;
+        // height: 30px;
+        // line-height: 29px;
+        // margin: 0 0 0 -4px;
+
+        display: table-cell;
+    }
+
+    
+}
+
+
+
+
+/* bot-nav
+* ------------------------------------------------------------ */
+
+.bot-nav {
+    width: 100%;
+    background-color: $main-bg;
+}
+
+.main-nav {
+    // 2번타입의 gnb
+}
+
+
+
+
+
+
+
+/* Btype
+* ------------------------------------------------------------ */
+
+.btype {
+    .logo-wrap {}
+    .input-wrap {
+        width: 690px;
+    }
+    .header-bxslider {
+        width: 260px;
+        float: left;
+
+        .bx-wrap {
+            width: 220px;
+            margin: 25px auto;
+        }
+    }
+}
+
+
+
+
+
+
+

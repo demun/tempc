@@ -1,0 +1,84 @@
+<div class="wrapper">
+    <div id="container">
+        <!-- 
+					notice 클래스 추가해줘야 됨
+					title 추가됨
+				 -->
+        <div class="notice" id="bo_list">
+            <div class="title">
+                공지사항
+                <span class="title-style-sub">공지사항을 획인해보세요.</span>
+            </div>
+            <div class="tbl_head01 tbl_wrap">
+                <table>
+                    <caption>공지사항 목록</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col"><a href="/basic/bbs/board.php?bo_table=notice&amp;sop=and&amp;sst=wr_datetime&amp;sod=desc&amp;sfl=&amp;stx=&amp;page=1">날짜</a></th>
+                            <th scope="col">글쓴이</th>
+                            <th scope="col"><a href="/basic/bbs/board.php?bo_table=notice&amp;sop=and&amp;sst=wr_hit&amp;sod=desc&amp;sfl=&amp;stx=&amp;page=1">조회</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td class="td_num">2</td>
+                            <td class="td_subject">
+                                <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=notice&amp;wr_id=5">테스트</a>
+                            </td>
+                            <td class="td_date">02-19</td>
+                            <td class="td_name sv_use"><span class="sv_member">최고관리자</span></td>
+                            <td class="td_num">1</td>
+                        </tr>
+                        <tr class="">
+                            <td class="td_num">1</td>
+                            <td class="td_subject">
+                                <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=notice&amp;wr_id=2">공지글 테스트<span class="sound_only">댓글</span><span class="cnt_cmt">2</span><span class="sound_only">개</span></a>
+                                <img src="http://61.37.147.220/basic/skin/board/basic/img/icon_file.gif" alt="첨부파일"><img src="http://61.37.147.220/basic/skin/board/basic/img/icon_link.gif" alt="관련링크"> </td>
+                            <td class="td_date">02-19</td>
+                            <td class="td_name sv_use"><span class="sv_member">최고관리자</span></td>
+                            <td class="td_num">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bo_fx">
+                <ul class="btn_bo_user">
+                    <li><a href="./write.php?bo_table=notice" class="btn_b02">글쓰기</a></li>
+                </ul>
+            </div>
+            <nav class="pg_wrap">
+                <span class="pg">
+			                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=1" class="pg_page pg_start"><i class="fa fa-angle-double-left"></i></a>
+			                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=1" class="pg_page">1<span class="sound_only">페이지</span></a>
+                <span class="sound_only">열린</span><strong class="pg_current">2</strong><span class="sound_only">페이지</span>
+                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=3" class="pg_page pg_end"><i class="fa fa-angle-double-right"></i></a>
+                </span>
+            </nav>
+            <fieldset id="bo_sch">
+                <legend>게시물 검색</legend>
+                <form name="fsearch" method="get">
+                    <input type="hidden" name="bo_table" value="notice">
+                    <input type="hidden" name="sca" value="">
+                    <input type="hidden" name="sop" value="and">
+                    <label for="sfl" class="sound_only">검색대상</label>
+                    <select name="sfl" id="sfl">
+                        <option value="wr_subject">제목</option>
+                        <option value="wr_content">내용</option>
+                        <option value="wr_subject||wr_content">제목+내용</option>
+                        <option value="mb_id,1">회원아이디</option>
+                        <option value="mb_id,0">회원아이디(코)</option>
+                        <option value="wr_name,1">글쓴이</option>
+                        <option value="wr_name,0">글쓴이(코)</option>
+                    </select>
+                    <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+                    <input type="text" name="stx" value="" required="" id="stx" class="frm_input required" size="15" maxlength="20">
+                    <input type="submit" value="검색" class="btn_submit">
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- //.main-wrap .wrapper -->

@@ -1,0 +1,116 @@
+/*
+* --------------------------------------------------------------
+*
+* 그누보드, 영카트 사용자정의 스타일
+*
+* --------------------------------------------------------------
+*/
+
+
+
+
+
+
+// 상품 상세 페이지
+// =============================================================
+
+
+
+
+/* 영카트 목록 리스트
+* ------------------------------------------------------------ */
+
+// .sanchor {
+// 	@include ulstyle();
+// 	margin: 10px 0 20px;
+// 	width: 100%;
+
+// 	li {
+// 		display: table-cell;
+// 		width: 1%;
+
+// 		a {
+// 			display: block;
+// 			padding: 10px;
+// 			color: #333;
+// 			border: 1px solid #ddd;
+// 			background-color: #fff;
+// 			text-decoration: none;
+// 			text-align: center;
+
+// 			&:hover {
+// 				background-color: lighten(#333, 10%);
+// 				color: #fff;
+// 			}
+
+// 			&.sanchor_on {
+// 				background-color: #333;
+// 				color: #fff;
+// 				&:hover {
+// 					background-color: lighten(#333, 10%);
+// 					border-color: #000;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+
+/* 바로구매, 장바구니, 위시리스트,추전하기 수정
+* ------------------------------------------------------------ */
+
+
+#sit_ov {
+	#sit_ov_btn {
+		input,
+		a {
+			width: 22%;
+			height: 50px;
+			font-size: 1.2em;
+			border: 1px solid #ccc;
+			color: #999;
+			background-color: #fff;
+
+			&:hover {
+				background-color: #555;
+				color: #fff;
+			}
+		}
+
+		#sit_btn_buy {
+			background-color: #333;
+			color: #fff;
+			&:hover {
+				background-color: lighten(#333, 10%);
+				border-color: #000;
+			}
+		}
+	}
+}
+
+
+
+/* this
+* ------------------------------------------------------------ */
+#sit_opt_added {
+	@include ulstyle();
+
+	.sit_opt_list {
+		> div {
+			margin-top: 10px;
+		}
+	}
+}
+
+
+
+#bo_sch {}
+
+
+
+
+
+
+
+
+

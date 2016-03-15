@@ -1,0 +1,101 @@
+/*
+---------------------------------------------------------------
+*
+* webzine 웹진게시판
+*
+*
+---------------------------------------------------------------
+*/
+
+#bo_list {
+	.bo_fx {
+		@include clearfix();
+
+		.btn_bo_adm {
+			@include clearfix();
+			float: left;
+			input[type="submit"] {
+				@extend %btnStyle;
+				padding: 5px 20px;
+				margin-right: 5px;
+				cursor: pointer;
+			}
+			li {
+				float: left;
+			}
+		}
+		.btn_bo_user {
+			@include clearfix();
+			float: right;
+			.btn_admin {
+				@extend %btnSubmit;
+				padding: 5px 20px;
+			}
+			.btn_b01 {
+				@extend %btnStyle;
+				padding: 5px 20px;
+				margin-right: 3px;
+			}
+			.btn_b02 {
+				@extend %btnBlack;
+				padding: 5px 20px;
+			}
+			li {
+				float: left;
+			}
+		}
+		&.bo_fx2 {
+			margin-bottom: -40px;
+
+			.btn_bo_user {
+				margin-top: -7px;
+			}
+		}
+	}
+}
+
+.bo_fx {
+	@include clearfix();
+	margin-top: 40px;
+	text-align: left;
+
+	&.webzin {
+		margin-bottom: -40px;
+		.btn_bo_user {
+			display: none;
+		}
+	}
+
+	#bo_list_total {
+		float: left;
+	}
+	
+
+}
+
+
+.bo_notice {
+	.fa-bell {
+		color: $active-bg;
+	}
+}
+.td_subject {
+	.list_img {
+		border: 1px solid $border-color;
+		width: 176px;
+		height: 124px;
+	}
+	.sb_vimg {
+	    position: absolute;
+	    display: block;
+	}
+	.sb_content {
+	    float: left;
+	    display: table;
+	    p {
+	        display: table-cell;
+	        vertical-align: middle;
+	    }
+	}
+}
+

@@ -1,0 +1,63 @@
+/*
+---------------------------------------------------------------
+*
+* banner
+*
+---------------------------------------------------------------
+*/
+
+
+
+.banner-wrap {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    @include clearfix();
+}
+
+
+
+.img-wrap-1 {
+	width: 815px;
+	float: left;
+}
+.img-wrap-2 {
+	float: right;
+	width: 270px;
+	height: 400px;
+	padding: 25px;
+	border: 1px solid $border-color;
+	text-align: center;
+	
+	.title {
+		font-size: 24px;
+		color: $link-color;
+		margin-bottom: 10px;
+	}
+	.caption {
+		
+	}
+	.text {
+		margin: 15px 0 0;
+	}
+	.num {
+		font-size: 22px;
+		margin: 0;
+		color: $link-color;
+	}
+}
+
+
+
+.banner-2 {
+	width: 100%;
+	background-color: #e7e7e7;
+	padding: 20px 0;
+	margin-top: 40px;
+}
+
+
+
+
+
+

@@ -1,0 +1,233 @@
+/**
+ * A type
+ * 대표클래스: gnb-top gnb-bot
+ * 
+ */
+
+.gnb-top {
+    @include ulstyle();
+    @include clearfix();
+
+    li {
+        display: block;
+        width: 150px;
+        float: left;
+        position: relative;
+
+        &:nth-child(1) {
+            a {
+                background-position: 0 0;
+            }
+            li a {
+                background-position: 0 -31px;
+            }
+            &:hover {
+                a {
+                    background-position: 0 -115px;
+                }
+                li a {
+                    background-position: 0 -146px;
+                }
+            }
+        }
+        &:nth-child(2) {
+            a {
+                background-position: -150px 0;
+            }
+            li a {
+                background-position: -150px -31px;
+            }
+            &:hover {
+                a {
+                    background-position: -150px -115px;
+                }
+                li a {
+                    background-position: -150px -146px;
+                }
+            }
+        }
+        &:nth-child(3) {
+            a {
+                background-position: -300px 0;
+            }
+            li a {
+                background-position: -300px -31px;
+            }
+            &:hover {
+                a {
+                    background-position: -300px -115px;
+                }
+                li a {
+                    background-position: -300px -146px;
+                }
+            }
+        }
+        &:nth-child(4) {
+            a {
+                background-position: -450px 0;
+            }
+            li a {
+                background-position: -450px -31px;
+            }
+            &:hover {
+                a {
+                    background-position: -450px -115px;
+                }
+                li a {
+                    background-position: -450px -146px;
+                }
+            }
+        }
+        &:nth-child(5) {
+            a {
+                background-position: -600px 0;
+            }
+            li a {
+                background-position: -600px -31px;
+            }
+            &:hover {
+                a {
+                    background-position: -600px -115px;
+                }
+                li a {
+                    background-position: -600px -146px;
+                }
+            }
+        }
+        &:nth-child(6) {
+            a {
+                background-position: -750px 0;
+            }
+            li a {
+                background-position: -750px -31px;
+            }
+            &:hover {
+                a {
+                    background-position: -750px -115px;
+                }
+                li a {
+                    background-position: -750px -146px;
+                }
+            }
+        }
+        &:nth-child(7) {
+            a {
+                background-position: -900px 0;
+            }
+            li a {
+                background-position: -900px -31px;
+            }
+            &:hover {
+                a {
+                    background-position: -900px -115px;
+                }
+                li a {
+                    background-position: -900px -146px;
+                }
+            }
+        }
+        &:nth-child(8) {
+            a {
+                background-position: -1050px 0;
+            }
+            li a {
+                background-position: -1050px -31px;
+            }
+            &:hover {
+                a {
+                    background-position: -1050px -115px;
+                }
+                li a {
+                    background-position: -1050px -146px;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            color: #fff;
+            padding: 9px 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            // background-image: url(../images/gnb.gif);
+            background-image: url(http://placehold.it/1200x1230);
+            background-repeat: no-repeat;
+            text-indent: -99999px;
+
+            &:hover {
+                color: $link-color;
+                background-color: $active-bg;
+            }
+        }
+
+        ul {
+            @include ulstyle();
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            display: block;
+            li {
+                display: block;
+                width: 100%;
+                a {
+                    display: block;
+                    color: #333;
+                    text-align: center;
+                    padding: 0;
+                    height: 84px;
+                    // background-position: 0 -35px;
+                }
+            }
+        }
+    }
+}
+
+.gnb-bot {
+    display: none;
+    @include clearfix();
+    @include ulstyle();
+    width: 100%;
+    position: absolute;
+    top: 118px;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    padding-top: 5px;
+
+    &.on { display: block; }
+
+
+    li {
+        width: 150px;
+        float: left;
+        position: relative;
+
+        ul {
+            @include clearfix();
+            @include ulstyle();
+            width: 100%;
+
+            li {
+                display: block;
+                width: 100%;
+                float: none;
+                @include clearfix();
+
+                a {
+                    display: block;
+                    color: $link-color;
+                    padding: 10px;
+                    text-decoration: none;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: $main-bg;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        
+    }
+}

@@ -1,0 +1,69 @@
+/*
+* --------------------------------------------------------------
+*
+* 768보다 작을때
+*
+* --------------------------------------------------------------
+*/
+
+
+
+
+@media (min-width: 768px) {
+// @media (max-width: 768px) {
+	
+	
+
+
+} // tablet
+
+@media (max-width: 1560px) {
+	
+	// .block-right {
+	// 	.col-left {
+	// 		width: 220px;
+	// 	}
+	// 	.col-right {
+	// 		width: 220px;
+	// 	}
+	// }
+	
+}
+
+@media (max-width: 800px) {
+	
+	.mainpage .packery-wrap .item {
+		// width: 50%;
+	}
+	
+}
+
+@media (max-width: 1000px) {
+	
+	.mainpage .packery-wrap .item {
+		// width: 33.3%;
+	}
+	
+}
+@media (min-width: 1500px) {
+	
+	.mainpage .packery-wrap .item {
+		// width: 20%;
+	}
+	
+}
+
+
+/* 중간 기기들 (데스크탑, 992px 이상) */
+@media (min-width: 960px) {
+
+	
+}
+
+/* 큰 기기들 (큰 데스크탑, 1200px 이상) */
+@media (min-width: 1200px) {
+
+	
+
+} // 1200
+

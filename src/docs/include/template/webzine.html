@@ -1,0 +1,188 @@
+<div class="wrapper">
+    <div id="container">
+        <div id="bo_list">
+            <div class="title">웹진게시판</div>
+            <!-- } 게시판 카테고리 끝 -->
+            <!-- 게시판 페이지 정보 및 버튼 시작 { -->
+            <!-- 
+webzin 클래스 추가
+     -->
+            <div class="bo_fx webzin">
+                <div id="bo_list_total">
+                    <span>Total 4건</span> 1 페이지
+                </div>
+                <ul class="btn_bo_user">
+                    <li><a href="http://61.37.147.220/basic/adm/board_form.php?w=u&amp;bo_table=webzine" class="btn_admin">관리자</a></li>
+                    <li><a href="./write.php?bo_table=webzine" class="btn_b02">글쓰기</a></li>
+                </ul>
+            </div>
+            <!-- } 게시판 페이지 정보 및 버튼 끝 -->
+            <form name="fboardlist" id="fboardlist" action="./board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
+                <input type="hidden" name="bo_table" value="webzine">
+                <input type="hidden" name="sfl" value="">
+                <input type="hidden" name="stx" value="">
+                <input type="hidden" name="spt" value="">
+                <input type="hidden" name="sca" value="">
+                <input type="hidden" name="sst" value="wr_num, wr_reply">
+                <input type="hidden" name="sod" value="">
+                <input type="hidden" name="page" value="1">
+                <input type="hidden" name="sw" value="">
+                <div class="tbl_head01 tbl_wrap">
+                    <table>
+                        <caption>웹진게시판 목록</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">
+                                    <label for="chkall" class="sound_only">현재 페이지 게시물 전체</label>
+                                    <input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);">
+                                </th>
+                                <th scope="col">제목</th>
+                                <th scope="col">글쓴이</th>
+                                <th scope="col"><a href="/basic/bbs/board.php?bo_table=webzine&amp;sop=and&amp;sst=wr_datetime&amp;sod=desc&amp;sfl=&amp;stx=&amp;page=1">날짜</a></th>
+                                <th scope="col"><a href="/basic/bbs/board.php?bo_table=webzine&amp;sop=and&amp;sst=wr_hit&amp;sod=desc&amp;sfl=&amp;stx=&amp;page=1">조회</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bo_notice">
+                                <td class="td_num"><i class="fa fa-bell"></i></td>
+                                <td class="td_chk">
+                                    <label for="chk_wr_id_0" class="sound_only">공지글 테스트</label>
+                                    <input type="checkbox" name="chk_wr_id[]" value="15" id="chk_wr_id_0">
+                                </td>
+                                <td class="td_subject">
+                                    <div class="sb_vimg">
+                                        <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=webzine&amp;wr_id=15">
+                                        </a>
+                                    </div>
+                                    <div class="sb_content">
+                                        <p>
+                                            <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=webzine&amp;wr_id=15">공지글 테스트<span class="sound_only">댓글</span><span class="cnt_cmt">2</span><span class="sound_only">개</span></a>
+                                            <img src="http://61.37.147.220/basic/skin/board/webzine/img/icon_file.gif" alt="첨부파일"><img src="http://61.37.147.220/basic/skin/board/webzine/img/icon_link.gif" alt="관련링크">
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="td_name sv_use"><span class="sv_member">최고관리자</span></td>
+                                <td class="td_date">02-19</td>
+                                <td class="td_num">2</td>
+                            </tr>
+                            <tr class="">
+                                <td class="td_num">3 </td>
+                                <td class="td_chk">
+                                    <label for="chk_wr_id_1" class="sound_only">테스트</label>
+                                    <input type="checkbox" name="chk_wr_id[]" value="22" id="chk_wr_id_1">
+                                </td>
+                                <td class="td_subject">
+                                    <div class="sb_vimg">
+                                        <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=webzine&amp;wr_id=22">
+                                            <img src="http://61.37.147.220/basic/skin/board/webzine/img/noimage.gif" class="list_img" title=""> </a>
+                                    </div>
+                                    <div class="sb_content" style="margin-left:186px;height:124px">
+                                        <p>
+                                            <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=webzine&amp;wr_id=22">테스트</a>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="td_name sv_use"><span class="sv_member">최고관리자</span></td>
+                                <td class="td_date">02-19</td>
+                                <td class="td_num">3</td>
+                            </tr>
+                            <tr class="">
+                                <td class="td_num">2 </td>
+                                <td class="td_chk">
+                                    <label for="chk_wr_id_2" class="sound_only">공지글 테스트</label>
+                                    <input type="checkbox" name="chk_wr_id[]" value="19" id="chk_wr_id_2">
+                                </td>
+                                <td class="td_subject">
+                                    <div class="sb_vimg">
+                                        <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=webzine&amp;wr_id=19">
+                                            <img src="http://61.37.147.220/basic/data/file/webzine/thumb-1025872890_LHCyItwo_img-07_174x124.gif" alt="" class="list_img"> </a>
+                                    </div>
+                                    <div class="sb_content" style="margin-left:186px;height:124px">
+                                        <p>
+                                            <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=webzine&amp;wr_id=19">공지글 테스트<span class="sound_only">댓글</span><span class="cnt_cmt">2</span><span class="sound_only">개</span></a>
+                                            <img src="http://61.37.147.220/basic/skin/board/webzine/img/icon_file.gif" alt="첨부파일"><img src="http://61.37.147.220/basic/skin/board/webzine/img/icon_link.gif" alt="관련링크">
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="td_name sv_use"><span class="sv_member">최고관리자</span></td>
+                                <td class="td_date">02-19</td>
+                                <td class="td_num">2</td>
+                            </tr>
+                            <tr class="">
+                                <td class="td_num">
+                                    1 </td>
+                                <td class="td_chk">
+                                    <label for="chk_wr_id_3" class="sound_only">테스트</label>
+                                    <input type="checkbox" name="chk_wr_id[]" value="18" id="chk_wr_id_3">
+                                </td>
+                                <td class="td_subject">
+                                    <div class="sb_vimg">
+                                        <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=webzine&amp;wr_id=18">
+                                            <img src="http://61.37.147.220/basic/skin/board/webzine/img/noimage.gif" class="list_img"> </a>
+                                    </div>
+                                    <div class="sb_content" style="margin-left:186px;height:124px">
+                                        <p>
+                                            <a href="http://61.37.147.220/basic/bbs/board.php?bo_table=webzine&amp;wr_id=18">테스트</a>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="td_name sv_use"><span class="sv_member">최고관리자</span></td>
+                                <td class="td_date">02-19</td>
+                                <td class="td_num">2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bo_fx">
+                    <ul class="btn_bo_adm">
+                        <li>
+                            <input type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value">
+                        </li>
+                        <li>
+                            <input type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value">
+                        </li>
+                        <li>
+                            <input type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value">
+                        </li>
+                    </ul>
+                    <ul class="btn_bo_user">
+                        <li><a href="./write.php?bo_table=webzine" class="btn_b02"><i class="fa fa-pencil-square-o"></i>글쓰기</a></li>
+                    </ul>
+                </div>
+            </form>
+            <nav class="pg_wrap">
+                <span class="pg">
+            <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=1" class="pg_page pg_start"><i class="fa fa-angle-double-left"></i></a>
+            <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=1" class="pg_page">1<span class="sound_only">페이지</span></a>
+                <span class="sound_only">열린</span><strong class="pg_current">2</strong><span class="sound_only">페이지</span>
+                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=3" class="pg_page pg_end"><i class="fa fa-angle-double-right"></i></a>
+                </span>
+            </nav>
+            <fieldset id="bo_sch">
+                <legend>게시물 검색</legend>
+                <form name="fsearch" method="get">
+                    <input type="hidden" name="bo_table" value="qa">
+                    <input type="hidden" name="sca" value="">
+                    <input type="hidden" name="sop" value="and">
+                    <label for="sfl" class="sound_only">검색대상</label>
+                    <select name="sfl" id="sfl">
+                        <option value="wr_subject">제목</option>
+                        <option value="wr_content">내용</option>
+                        <option value="wr_subject||wr_content">제목+내용</option>
+                        <option value="mb_id,1">회원아이디</option>
+                        <option value="mb_id,0">회원아이디(코)</option>
+                        <option value="wr_name,1">글쓴이</option>
+                        <option value="wr_name,0">글쓴이(코)</option>
+                    </select>
+                    <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+                    <input type="text" name="stx" value="" required="" id="stx" class="frm_input required" size="15" maxlength="20">
+                    <input type="submit" value="검색" class="btn_submit">
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //.main-wrap .wrapper -->

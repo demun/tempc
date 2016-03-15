@@ -1,0 +1,63 @@
+/**
+ * B Type
+ * 드롭다운 형태
+ * 대표클래스: gnb-dropdown
+ */
+
+
+.gnb-dropdown {
+	@include ulstyle();
+	@include clearfix();
+
+	li {
+		display: table-cell;
+		width: 1%;
+		position: relative;
+
+		a {
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			text-align: center;
+			padding: 10px;
+
+			&:hover {
+				color: #000;
+				background-color: $active-bg;
+			}
+		}
+
+		ul {
+			@include ulstyle();
+			position: absolute;
+			top: 39px;
+			left: 0;
+			display: block;
+			width: 100%;
+			background-color: #fff;
+			border: 1px solid $border-color;
+
+			&:after {
+				position: absolute;
+				content: '';
+				
+			}
+
+			li {
+				display: block;
+				width: 100%;
+
+				a {
+					display: block;
+					color: #333;
+
+					&:hover {
+						color: #333;
+						background-color: transparent;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}

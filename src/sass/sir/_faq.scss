@@ -1,0 +1,98 @@
+/*
+---------------------------------------------------------------
+*
+* faq
+*
+---------------------------------------------------------------
+*/
+
+
+#bo_cate {
+	h2 {
+		display: none;
+	}
+}
+
+
+#bo_cate_ul {
+	@include ulstyle();
+	margin-top: 40px;
+	margin-bottom: 20px;
+
+	li {
+		display: table-cell;
+		width: 1%;
+
+		a {
+			display: block;
+			text-align: center;
+			padding: 10px;
+			background-color: #dcdcdc;
+			color: $text-color;
+			text-decoration: none;
+
+			&.on {
+				background-color: $active-bg;
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+
+#faq_con {
+	border: 0 none;
+	h2 {
+		display: none;
+	}
+
+	ol {
+		@include ulstyle();
+		border-bottom: 1px solid #999;
+		h3 {
+			margin: 0;
+			a {
+				background: none;
+				position: relative;
+				display: block;
+				border-top: 1px solid #999;
+				padding: 15px 25px;
+				color: #333;
+				text-decoration: none;
+				font-size: 14px;
+				font-weight: 400;
+				p {
+					margin: 0;
+				}
+				i {
+					position: absolute;
+					right: 20px;
+					top: 10px;
+					color: $active-bg;
+					font-size: 30px;
+				}
+			}
+		}
+
+		.con_inner {
+			display: none;
+			padding: 10px 10px 20px 60px;
+			border-top: 1px solid $border-color;
+			background: url(../images/icon/reply.png) no-repeat 40px 10px;
+			
+		}
+		.con-child {
+			padding: 10px;
+			background-color: #f5f5f5;
+			color: #666;
+		}
+		.con_closer {
+			display: none;
+		}
+	}
+}
+
+
+
+

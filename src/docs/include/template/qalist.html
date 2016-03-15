@@ -1,0 +1,147 @@
+<div class="wrapper">
+    <div id="container">
+        <!-- 
+					notice 클래스 추가해줘야 됨
+					title 추가됨
+				 -->
+        <div class="notice" id="bo_list">
+            <div class="title">
+                공지사항
+                <span class="title-style-sub">공지사항을 획인해보세요.</span>
+            </div>
+            <!-- 
+						탭 새로 제작
+						현재 위치 bo_cate_on 아이디 부여-개발해야됨
+					 -->
+            <ul id="bo_cate_ul">
+                <li><a href="http://echomes.co.kr/bbs/board.php?bo_table=notice" id="bo_cate_on">전체</a></li>
+                <li><a href="javascript:;">회원</a></li>
+                <li><a href="javascript:;">포인트</a></li>
+            </ul>
+            <!--
+.bo_fx 에 .bo_fx2 클래스 추가해주세요.
+
+
+여기에서 btn_b02 는 위아래 똑같이 나옵니다.
+상단에서는 안나오게 해주세요.
+ -->
+            <div class="bo_fx bo_fx2">
+                <div id="bo_list_total">
+                    <span>Total 3건</span> 1 페이지
+                </div>
+                <ul class="btn_bo_user">
+                    <li><a href="http://61.37.147.220/basic/adm/qa_config.php" class="btn_admin">관리자</a></li>
+                    <!-- <li><a href="http://61.37.147.220/basic/bbs/qawrite.php" class="btn_b02">문의등록</a></li> -->
+                </ul>
+            </div>
+            <div class="tbl_head01 tbl_wrap">
+                <table>
+                    <caption> 목록</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">
+                                <label for="chkall" class="sound_only">현재 페이지 게시물 전체</label>
+                                <input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);">
+                            </th>
+                            <th scope="col">분류</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">글쓴이</th>
+                            <th scope="col">상태</th>
+                            <th scope="col">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td_num">3</td>
+                            <td class="td_chk">
+                                <label for="chk_qa_id_0" class="sound_only">추가질문</label>
+                                <input type="checkbox" name="chk_qa_id[]" value="4" id="chk_qa_id_0">
+                            </td>
+                            <td class="td_category">회원</td>
+                            <td class="td_subject">
+                                <a href="http://61.37.147.220/basic/bbs/qaview.php?qa_id=4">
+					                    추가질문                </a>
+                                <img src="http://61.37.147.220/basic/skin/qa/basic/img/icon_file.gif"> </td>
+                            <td class="td_name">최고관리자</td>
+                            <td class="td_stat txt_done">답변완료</td>
+                            <td class="td_date">16-02-19</td>
+                        </tr>
+                        <tr>
+                            <td class="td_num">2</td>
+                            <td class="td_chk">
+                                <label for="chk_qa_id_1" class="sound_only">포인트 문의</label>
+                                <input type="checkbox" name="chk_qa_id[]" value="2" id="chk_qa_id_1">
+                            </td>
+                            <td class="td_category">포인트</td>
+                            <td class="td_subject">
+                                <a href="http://61.37.147.220/basic/bbs/qaview.php?qa_id=2">
+					                    포인트 문의                </a>
+                                <img src="http://61.37.147.220/basic/skin/qa/basic/img/icon_file.gif"> </td>
+                            <td class="td_name">최고관리자</td>
+                            <td class="td_stat txt_rdy">답변대기</td>
+                            <td class="td_date">16-02-19</td>
+                        </tr>
+                        <tr>
+                            <td class="td_num">1</td>
+                            <td class="td_chk">
+                                <label for="chk_qa_id_2" class="sound_only">회원이 문의함</label>
+                                <input type="checkbox" name="chk_qa_id[]" value="1" id="chk_qa_id_2">
+                            </td>
+                            <td class="td_category">회원</td>
+                            <td class="td_subject">
+                                <a href="http://61.37.147.220/basic/bbs/qaview.php?qa_id=1">
+					                    회원이 문의함                </a>
+                            </td>
+                            <td class="td_name">최고관리자</td>
+                            <td class="td_stat txt_done">답변완료</td>
+                            <td class="td_date">16-02-19</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bo_fx">
+                <ul class="btn_bo_adm">
+                    <li>
+                        <input type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value">
+                    </li>
+                </ul>
+                <ul class="btn_bo_user">
+                    <li><a href="http://61.37.147.220/basic/bbs/qalist.php" class="btn_b01">목록</a></li>
+                    <li><a href="http://61.37.147.220/basic/bbs/qawrite.php" class="btn_b02">문의등록</a></li>
+                </ul>
+            </div>
+            <nav class="pg_wrap">
+                <span class="pg">
+			                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=1" class="pg_page pg_start"><i class="fa fa-angle-double-left"></i></a>
+			                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=1" class="pg_page">1<span class="sound_only">페이지</span></a>
+                <span class="sound_only">열린</span><strong class="pg_current">2</strong><span class="sound_only">페이지</span>
+                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+                <a href="/basic/shop/list.php?ca_id=20&amp;sort=it_price&amp;sortodr=asc&amp;page=3" class="pg_page pg_end"><i class="fa fa-angle-double-right"></i></a>
+                </span>
+            </nav>
+            <fieldset id="bo_sch">
+                <legend>게시물 검색</legend>
+                <form name="fsearch" method="get">
+                    <input type="hidden" name="bo_table" value="notice">
+                    <input type="hidden" name="sca" value="">
+                    <input type="hidden" name="sop" value="and">
+                    <label for="sfl" class="sound_only">검색대상</label>
+                    <select name="sfl" id="sfl">
+                        <option value="wr_subject">제목</option>
+                        <option value="wr_content">내용</option>
+                        <option value="wr_subject||wr_content">제목+내용</option>
+                        <option value="mb_id,1">회원아이디</option>
+                        <option value="mb_id,0">회원아이디(코)</option>
+                        <option value="wr_name,1">글쓴이</option>
+                        <option value="wr_name,0">글쓴이(코)</option>
+                    </select>
+                    <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+                    <input type="text" name="stx" value="" required="" id="stx" class="frm_input required" size="15" maxlength="20">
+                    <input type="submit" value="검색" class="btn_submit">
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- //.main-wrap .wrapper -->
