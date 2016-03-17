@@ -15,6 +15,7 @@
 	height: 100%;
 	z-index: 1;
 	position: relative;
+	@include clearfix();
 }
 
 .quick-wrap {
