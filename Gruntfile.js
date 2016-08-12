@@ -19,9 +19,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         config: appConfig,
-        // <%= config.src %>
-        // <%= config.dest %>
-        // <%= config.bower %>
 
         clean: {
             dist: {
@@ -199,27 +196,28 @@ module.exports = function (grunt) {
                 ],
                 dest: '<%= config.dest %>/js/jquery.js'
             },
-            site: {
+            plugins: {
                 src: [
-                    // '<%= config.bower %>/bootstrap/dist/js/bootstrap.min.js', // jquery-1.9.1
-                    // '<%= config.src %>/js/lib/cbpAnimatedHeader.js',
                     '<%= config.bower %>/fafnur-bxslider/dist/jquery.bxslider.min.js',
                     '<%= config.bower %>/jquery.easing/js/jquery.easing.min.js',
                     '<%= config.bower %>/smooth-scroll/smooth-scroll.min.js',
                     '<%= config.src %>/js/site/jquery.showHide.js',
                     '<%= config.src %>/js/site/jquery.sidebar.js',
-                    '<%= config.src %>/js/site/site.js',
                 ],
+                dest: '<%= config.dest %>/js/plugins.js'
+            },
+            site: {
+                src: '<%= config.src %>/js/site/site.js',
                 dest: '<%= config.dest %>/js/site.js'
             }
         },
 
         uglify: {
             options: {
-                // banner: '/*!\n' +
-                // ' * <%= pkg.name %> | v<%= pkg.version %> | <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-                // ' * <%= pkg.author %> | <%= pkg.email %>\n' +
-                // ' */\n',
+                banner: '/*!\n' +
+                ' * <%= pkg.name %> | v<%= pkg.version %> | <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+                ' * <%= pkg.author %> | <%= pkg.email %>\n' +
+                ' */\n',
                 compress: {
                     warnings: false
                 },
@@ -229,6 +227,10 @@ module.exports = function (grunt) {
             jquery: {
                 src: '<%= concat.jquery.dest %>',
                 dest: '<%= config.dest %>/js/jquery.min.js'
+            },
+            plugins: {
+                src: '<%= concat.plugins.dest %>',
+                dest: '<%= config.dest %>/js/plugins.min.js'
             },
             site: {
                 src: '<%= config.dest %>/js/site.js',
@@ -243,7 +245,6 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= config.src %>/images/',
-                    // src: '**/*,
                     src: '**/*.{png,jpeg,jpg,gif,ico}',
                     dest: '<%= config.dest %>/images/'
                 }]
